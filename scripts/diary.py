@@ -14,6 +14,8 @@ import argparse
 import base64
 import datetime
 import html
+import io
+import random
 import re
 import shutil
 import subprocess
@@ -25,6 +27,7 @@ ROOT = Path(__file__).resolve().parent.parent
 NAME = "Shittu AbdulQadir Adeshina"
 SIGNATURE = "عبدالقادر"
 PHOTO = ROOT / "assets" / "photo.jpg"
+BACKGROUNDS = ROOT / "assets" / "backgrounds"  # faded photos; one is picked at random for each page
 ACTIVITY_SECTIONS = ("Morning", "Afternoon", "Evening")
 
 ARABIC = re.compile(r"[؀-ۿݐ-ݿ]")
@@ -97,6 +100,7 @@ def render_items(items, star=False):
 
 CSS = """
 @page { size: A4; margin: 14mm; }
+html, body { background: transparent !important; }
 body { font-family: 'DejaVu Serif', Georgia, serif; color: #1f2a2e; font-size: 11.5pt; line-height: 1.55; margin: 0; }
 .band { background: #0f4c45; color: #fff; padding: 14px 18px; border-bottom: 4px solid #b8893b; }
 .band table { width: 100%; border-collapse: collapse; }
@@ -200,6 +204,39 @@ def render_pdf(html_file, out):
         sys.exit(f"PDF engine failed for {out}")
 
 
+def add_backgrounds(pdf, seed):
+    """Put a randomly chosen faded photo behind every page (random, but stable per date)."""
+    images = sorted(BACKGROUNDS.glob("*.jpg"))
+    if not images:
+        return
+    try:
+        from pypdf import PdfReader, PdfWriter
+        from pypdf.generic import DecodedStreamObject
+        from reportlab.lib.pagesizes import A4
+        from reportlab.pdfgen import canvas
+    except ImportError:
+        print("pypdf/reportlab missing: skipping page backgrounds (pip install pypdf reportlab)")
+        return
+    rng = random.Random(seed)
+    writer = PdfWriter()
+    for page in PdfReader(str(pdf)).pages:
+        buf = io.BytesIO()
+        c = canvas.Canvas(buf, pagesize=A4)
+        c.drawImage(str(rng.choice(images)), 0, 0, width=A4[0], height=A4[1])
+        c.save()
+        bg = PdfReader(io.BytesIO(buf.getvalue())).pages[0]
+        # wkhtmltopdf paints a white rectangle behind the text; drop it so the photo shows through.
+        data = page.get_contents().get_data()
+        data = re.sub(rb"/CSp cs 1 1 1 scn\n/GSa gs\nq\n[^\n]*cm\n0 0 [\d.]+ [\d.]+ re\nf\nQ\n", b"", data, count=1)
+        cleaned = DecodedStreamObject()
+        cleaned.set_data(data)
+        page.replace_contents(cleaned)
+        bg.merge_page(page)
+        writer.add_page(bg)
+    with open(pdf, "wb") as fh:
+        writer.write(fh)
+
+
 def cmd_build(args):
     if args.files:
         targets = [Path(f).resolve() for f in args.files]
@@ -215,6 +252,7 @@ def cmd_build(args):
             h.write_text(entry_html(p), encoding="utf-8")
             out = pdf_path(p)
             render_pdf(h, out)
+            add_backgrounds(out, p.stem)
             print("built", out.relative_to(ROOT))
     write_achievements()
 
