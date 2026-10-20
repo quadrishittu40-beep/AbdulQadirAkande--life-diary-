@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Life Diary</title>
+<style>
+:root{--bg:#f7f3ec;--card:#fffdf8;--ink:#2b2a27;--mute:#7a756b;--line:#e4ddcf;--accent:#1f6f5c;--accent-ink:#fff;--danger:#b3412f}
+@media (prefers-color-scheme:dark){:root{--bg:#171917;--card:#1f221f;--ink:#ece8de;--mute:#9a9588;--line:#31352f;--accent:#4fb89c;--accent-ink:#0d1512;--danger:#e07a68}}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Naskh Arabic",sans-serif}
+button,input,select,textarea{font:inherit;color:inherit}
+header.top{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--card);position:sticky;top:0;z-index:5}
+header.top h1{font-size:18px;margin:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn{border:1px solid var(--line);background:var(--card);padding:8px 12px;border-radius:10px;cursor:pointer;min-height:40px}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.danger{color:var(--danger)}
+.btn:active{transform:translateY(1px)}
+.app{display:grid;grid-template-columns:320px 1fr;height:calc(100% - 61px)}
+aside{border-right:1px solid var(--line);overflow:auto;padding:12px}
+main{overflow:auto;padding:16px}
+.search{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);margin-bottom:10px}
+.item{display:block;width:100%;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:8px;cursor:pointer}
+.item.active{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.item .d{font-weight:600}
+.item .s{color:var(--mute);font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.item .b{font-size:12px;color:var(--accent)}
+.panel{max-width:760px;margin:0 auto}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.row>*{flex:1;min-width:140px}
+label{display:block;font-size:13px;color:var(--mute);margin:12px 0 4px;font-weight:600;letter-spacing:.02em}
+input[type=date],select,input[type=text]{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+textarea{width:100%;min-height:110px;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--card);resize:vertical}
+.hint{font-size:12px;color:var(--mute);margin-top:4px}
+.status{font-size:13px;color:var(--mute);min-height:20px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+.back{display:none}
+.empty{color:var(--mute);text-align:center;padding:40px 10px}
+.ach-day{margin-bottom:18px}
+.ach-day h3{margin:0 0 6px;font-size:15px;color:var(--accent)}
+.ach-day li{margin:3px 0}
+.profile{display:flex;gap:14px;align-items:center}
+.avatar{width:72px;height:72px;border-radius:50%;background:var(--line);object-fit:cover;flex:none}
+#sheet{display:none}
+@media (max-width:760px){
+ .app{grid-template-columns:1fr}
+ aside{display:block}
+ main{display:none}
+ body.edit aside{display:none}
+ body.edit main{display:block}
+ .back{display:inline-block}
+}
+@media print{
+ header.top,.app{display:none!important}
+ body{background:#fff;color:#000}
+ #sheet{display:block}
+}
+#sheet{font-family:Georgia,"Noto Naskh Arabic",serif;color:#000;padding:8mm}
+#sheet .pg{page-break-after:always}
+#sheet .pg:last-child{page-break-after:auto}
+#sheet .hd{display:flex;align-items:center;gap:14px;border-bottom:2px solid #1f6f5c;padding-bottom:10px;margin-bottom:14px}
+#sheet .hd img{width:64px;height:64px;border-radius:50%;object-fit:cover}
+#sheet .hd .n{font-size:20px;font-weight:700}
+#sheet .hd .t{color:#555;font-size:13px}
+#sheet h2{font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:#1f6f5c;margin:16px 0 4px}
+#sheet p,#sheet li{font-size:14px;margin:2px 0;white-space:pre-wrap}
+#sheet ul{margin:0;padding-left:20px}
+#sheet .sig{margin-top:30px;text-align:right}
+#sheet .sig .ar{font-size:30px;line-height:1.2}
+#sheet .sig .nm{font-size:12px;color:#555;border-top:1px solid #999;display:inline-block;padding-top:3px;margin-top:2px}
+</style>
+</head>
+<body>
+<header class="top">
+  <button class="btn back" id="backBtn" aria-label="Back to list">←</button>
+  <h1 id="title">My Life Diary</h1>
+  <button class="btn primary" id="todayBtn">Today</button>
+  <button class="btn" id="achBtn">Achievements</button>
+  <button class="btn" id="setBtn">⚙</button>
+</header>
+
+<div class="app">
+  <aside>
+    <input class="search" id="search" type="text" placeholder="Search entries…" dir="auto">
+    <div id="list"></div>
+  </aside>
+  <main><div class="panel" id="panel"></div></main>
+</div>
+
+<div id="sheet"></div>
+
+<script>
+(function(){
+'use strict';
+var KEY='lifeDiary.v1';
+var mem=null;
+var state={profile:{name:'Shittu AbdulQadir Adeshina',photo:''},entries:{}};
+var FIELDS=[
+ ['activities','Daily activities','What did you do today?'],
+ ['achievements','Achievements','One per line'],
+ ['reflections','Reflections','Thoughts, lessons, feelings…'],
+ ['gratitude','Grateful for',''],
+ ['plans','Plans for tomorrow','']
+];
+var MOODS=['','😄 Great','🙂 Good','😐 Okay','😔 Low','😣 Hard'];
+var cur=todayStr();
+var view='entry';
+
+function load(){
+ try{var r=localStorage.getItem(KEY);if(r){var d=JSON.parse(r);if(d&&d.entries){state=d;state.profile=state.profile||{name:'',photo:''};}}}catch(e){if(mem)state=mem;}
+}
+function save(){
+ mem=state;
+ try{localStorage.setItem(KEY,JSON.stringify(state));setStatus('Saved');}
+ catch(e){setStatus('Could not save in this browser. Use Backup to keep your data.');}
+}
+function setStatus(t){var s=document.getElementById('status');if(s)s.textContent=t;}
+function pad(n){return n<10?'0'+n:''+n}
+function todayStr(){var d=new Date();return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());}
+function parse(k){var p=k.split('-');return new Date(+p[0],+p[1]-1,+p[2]);}
+function fmt(k,long){return parse(k).toLocaleDateString(undefined,long?{weekday:'long',year:'numeric',month:'long',day:'numeric'}:{weekday:'short',year:'numeric',month:'short',day:'numeric'});}
+function el(tag,attrs,kids){
+ var e=document.createElement(tag);
+ if(attrs)for(var k in attrs){if(k==='text')e.textContent=attrs[k];else if(k==='on')for(var ev in attrs.on)e.addEventListener(ev,attrs.on[ev]);else e.setAttribute(k,attrs[k]);}
+ (kids||[]).forEach(function(c){if(c)e.appendChild(c);});
+ return e;
+}
+function lines(t){return (t||'').split('\n').map(function(s){return s.replace(/^\s*[-•*]\s*/,'').trim();}).filter(Boolean);}
+function hasContent(e){return e&&FIELDS.some(function(f){return (e[f[0]]||'').trim();})||(e&&e.mood);}
+
+function renderList(){
+ var q=document.getElementById('search').value.trim().toLowerCase();
+ var box=document.getElementById('list');box.innerHTML='';
+ var keys=Object.keys(state.entries).sort().reverse().filter(function(k){
+  if(!q)return true;var e=state.entries[k];
+  return (k+' '+FIELDS.map(function(f){return e[f[0]]||''}).join(' ')).toLowerCase().indexOf(q)>-1;
+ });
+ if(!keys.length){box.appendChild(el('div',{class:'empty',text:q?'No matches.':'No entries yet. Tap Today to write your first one.'}));return;}
+ keys.forEach(function(k){
+  var e=state.entries[k];
+  var snip=(e.activities||e.reflections||e.achievements||'').replace(/\s+/g,' ').trim();
+  var n=lines(e.achievements).length;
+  var kids=[el('div',{class:'d',text:fmt(k)}),el('div',{class:'s',dir:'auto',text:snip||'(empty)'})];
+  if(n)kids.push(el('div',{class:'b',text:'★ '+n+' achievement'+(n>1?'s':'')}));
+  box.appendChild(el('button',{class:'item'+(view==='entry'&&k===cur?' active':''),on:{click:function(){openEntry(k);}}},kids));
+ });
+}
+
+function openEntry(k){cur=k;view='entry';document.body.classList.add('edit');render();}
+
+function renderEntry(){
+ var p=document.getElementById('panel');p.innerHTML='';
+ var e=state.entries[cur]||{};
+ document.getElementById('title').textContent=fmt(cur);
+ var dateIn=el('input',{type:'date',value:cur,on:{change:function(){if(this.value)openEntry(this.value);}}});
+ var mood=el('select',{on:{change:function(){upd('mood',this.value);}}},MOODS.map(function(m){var o=el('option',{value:m,text:m||'Mood (optional)'});if(m===(e.mood||''))o.selected=true;return o;}));
+ p.appendChild(el('div',{class:'row'},[el('div',{},[el('label',{text:'DATE'}),dateIn]),el('div',{},[el('label',{text:'MOOD'}),mood])]));
+ FIELDS.forEach(function(f){
+  var ta=el('textarea',{dir:'auto',placeholder:f[2],'aria-label':f[1]});
+  ta.value=e[f[0]]||'';
+  ta.addEventListener('input',function(){upd(f[0],ta.value);});
+  p.appendChild(el('label',{text:f[1].toUpperCase()}));
+  p.appendChild(ta);
+ });
+ p.appendChild(el('div',{class:'hint',text:'Arabic and other right-to-left text is supported.'}));
+ p.appendChild(el('div',{class:'actions'},[
+  el('button',{class:'btn primary',text:'Save as PDF',on:{click:function(){printKeys([cur]);}}}),
+  el('button',{class:'btn danger',text:'Delete entry',on:{click:delEntry}})
+ ]));
+ p.appendChild(el('div',{class:'status',id:'status',text:state.entries[cur]?'Saved':'Not saved yet. Start typing.'}));
+}
+
+function upd(f,v){
+ var e=state.entries[cur]||(state.entries[cur]={});
+ e[f]=v;e.updated=Date.now();
+ if(!hasContent(e)){delete state.entries[cur];}
+ save();renderList();
+}
+function delEntry(){
+ if(!state.entries[cur]){return;}
+ if(!confirm('Delete the entry for '+fmt(cur)+'?'))return;
+ delete state.entries[cur];save();renderEntry();renderList();
+}
+
+function renderAch(){
+ var p=document.getElementById('panel');p.innerHTML='';
+ document.getElementById('title').textContent='Achievements';
+ var keys=Object.keys(state.entries).sort().reverse().filter(function(k){return lines(state.entries[k].achievements).length;});
+ var total=0;
+ keys.forEach(function(k){total+=lines(state.entries[k].achievements).length;});
+ p.appendChild(el('div',{class:'row'},[el('div',{},[el('strong',{text:total+' achievement'+(total===1?'':'s')+' across '+keys.length+' day'+(keys.length===1?'':'s')})]),
+  el('button',{class:'btn',text:'Save as PDF',on:{click:function(){printAch(keys);}}})]));
+ if(!keys.length)p.appendChild(el('div',{class:'empty',text:'Achievements you add to daily entries appear here, newest first.'}));
+ keys.forEach(function(k){
+  var ul=el('ul',{dir:'auto'},lines(state.entries[k].achievements).map(function(t){return el('li',{text:t});}));
+  p.appendChild(el('div',{class:'ach-day'},[el('h3',{text:fmt(k)}),ul]));
+ });
+}
+
+function renderSettings(){
+ var p=document.getElementById('panel');p.innerHTML='';
+ document.getElementById('title').textContent='Settings & backup';
+ var img=el('img',{class:'avatar',alt:'Your photo'});if(state.profile.photo)img.src=state.profile.photo;
+ var file=el('input',{type:'file',accept:'image/*'});
+ file.addEventListener('change',function(){
+  var f=file.files&&file.files[0];if(!f)return;
+  var r=new FileReader();
+  r.onload=function(){var im=new Image();im.onload=function(){
+   var s=256,c=document.createElement('canvas');c.width=c.height=s;
+   var m=Math.min(im.width,im.height),sx=(im.width-m)/2,sy=(im.height-m)/2;
+   c.getContext('2d').drawImage(im,sx,sy,m,m,0,0,s,s);
+   state.profile.photo=c.toDataURL('image/jpeg',.85);save();img.src=state.profile.photo;
+  };im.src=r.result;};
+  r.readAsDataURL(f);
+ });
+ var nm=el('input',{type:'text',dir:'auto',value:state.profile.name||''});
+ nm.addEventListener('input',function(){state.profile.name=nm.value;save();});
+ p.appendChild(el('div',{class:'profile'},[img,el('div',{style:'flex:1'},[el('label',{text:'YOUR NAME (SHOWN ON PDFs)'}),nm])]));
+ p.appendChild(el('label',{text:'PHOTO (SHOWN IN PDF HEADER)'}));
+ p.appendChild(file);
+ p.appendChild(el('label',{text:'BACKUP'}));
+ p.appendChild(el('div',{class:'hint',text:'Your diary is stored only in this browser. Export a backup regularly, and import it to restore or move to another device.'}));
+ var imp=el('input',{type:'file',accept:'application/json,.json',style:'display:none'});
+ imp.addEventListener('change',function(){
+  var f=imp.files&&imp.files[0];if(!f)return;
+  var r=new FileReader();
+  r.onload=function(){
+   try{
+    var d=JSON.parse(r.result);if(!d||typeof d.entries!=='object')throw 0;
+    var n=0;for(var k in d.entries){if(/^\d{4}-\d{2}-\d{2}$/.test(k)){state.entries[k]=d.entries[k];n++;}}
+    if(d.profile){if(d.profile.name)state.profile.name=d.profile.name;if(d.profile.photo)state.profile.photo=d.profile.photo;}
+    save();renderList();alert('Imported '+n+' entries.');
+   }catch(x){alert('That file is not a valid diary backup.');}
+  };r.readAsText(f);
+ });
+ p.appendChild(el('div',{class:'actions'},[
+  el('button',{class:'btn primary',text:'Export backup',on:{click:exportJSON}}),
+  el('button',{class:'btn',text:'Import backup',on:{click:function(){imp.click();}}}),
+  el('button',{class:'btn',text:'Save ALL entries as PDF',on:{click:function(){printKeys(Object.keys(state.entries).sort());}}}),
+  imp
+ ]));
+}
+
+function exportJSON(){
+ var blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});
+ var a=document.createElement('a');a.href=URL.createObjectURL(blob);
+ a.download='life-diary-backup-'+todayStr()+'.json';
+ document.body.appendChild(a);a.click();
+ setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},500);
+}
+
+function sheetHeader(sub){
+ var hd=el('div',{class:'hd'});
+ if(state.profile.photo)hd.appendChild(el('img',{src:state.profile.photo,alt:''}));
+ hd.appendChild(el('div',{},[el('div',{class:'n',text:state.profile.name||'My Life Diary'}),el('div',{class:'t',text:sub})]));
+ return hd;
+}
+function signature(){
+ return el('div',{class:'sig'},[el('div',{class:'ar',dir:'rtl',text:'عبدالقادر'}),el('div',{class:'nm',text:state.profile.name||''})]);
+}
+function printKeys(keys){
+ var s=document.getElementById('sheet');s.innerHTML='';
+ keys.forEach(function(k){
+  var e=state.entries[k];if(!e)return;
+  var pg=el('div',{class:'pg'});
+  pg.appendChild(sheetHeader('Daily diary · '+fmt(k,true)+(e.mood?' · '+e.mood:'')));
+  FIELDS.forEach(function(f){
+   var v=(e[f[0]]||'').trim();if(!v)return;
+   pg.appendChild(el('h2',{text:f[1]}));
+   if(f[0]==='achievements'){pg.appendChild(el('ul',{dir:'auto'},lines(v).map(function(t){return el('li',{text:t});})));}
+   else pg.appendChild(el('p',{dir:'auto',text:v}));
+  });
+  pg.appendChild(signature());
+  s.appendChild(pg);
+ });
+ if(!s.firstChild){alert('Nothing to export yet. Write an entry first.');return;}
+ window.print();
+}
+function printAch(keys){
+ var s=document.getElementById('sheet');s.innerHTML='';
+ var pg=el('div',{class:'pg'});
+ pg.appendChild(sheetHeader('Achievements'));
+ keys.forEach(function(k){
+  pg.appendChild(el('h2',{text:fmt(k,true)}));
+  pg.appendChild(el('ul',{dir:'auto'},lines(state.entries[k].achievements).map(function(t){return el('li',{text:t});})));
+ });
+ pg.appendChild(signature());
+ s.appendChild(pg);
+ window.print();
+}
+
+function render(){
+ if(view==='entry')renderEntry();else if(view==='ach')renderAch();else renderSettings();
+ renderList();
+}
+function go(v){view=v;document.body.classList.add('edit');render();}
+
+document.getElementById('todayBtn').addEventListener('click',function(){openEntry(todayStr());});
+document.getElementById('achBtn').addEventListener('click',function(){go('ach');});
+document.getElementById('setBtn').addEventListener('click',function(){go('settings');});
+document.getElementById('backBtn').addEventListener('click',function(){document.body.classList.remove('edit');document.getElementById('title').textContent='My Life Diary';});
+document.getElementById('search').addEventListener('input',renderList);
+
+load();
+render();
+if(window.matchMedia&&window.matchMedia('(min-width:761px)').matches)document.body.classList.add('edit');
+})();
+</script>
+</body>
+</html>
