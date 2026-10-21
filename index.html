@@ -2,715 +2,513 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Quadri and Olamide Diary</title>
-<meta name="description" content="A shared diary for Quadri and Olamide.">
-<meta name="theme-color" content="#0F6B45">
-<link rel="manifest" href="/manifest.webmanifest">
-<link rel="icon" type="image/png" href="/icons/icon-192.png">
-<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My Life Diary</title>
+<meta name="theme-color" content="#0f4c45">
+<meta name="description" content="Personal diary for daily activities and achievements, with a signed PDF for each day.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAwFBMVEXZqY7HhXW0fHK8cl2Ycmy2aGCiZlmSY1dmYlylVkCRVUCGVEh4UkpVU0sWT0gNTkYEUERMTEkQTEYQTEUQTEQPTEYPTEUPTEQNTEXjDWLvBGTaBFDuA2DkA1bdA07VA0n2AmruAl/pAlflAlThAlPgAk7cAkzZAkrUAkX5AGntAVnlAVPcAU6GSC5/QSJ0QDBiQzxiPCplOCudG0rABD1kMSNgKRlIQTwxQEcZSEMOS0QHSUJPLSQ5KCEpFA0MCAcR7DfRAAAEF0lEQVR42q3VC3OqOBQAYIQICFFQ2i4FeYVHEMrDCgEr4P//V3vozt3d2qvTnVnGGZ0xX845yUngXv7jw/0/wDCMnWkYPwaGaZqXnWbufggM89xvJak7X3Y/AsbHRnqveWno1hfjJ2B3kcVx4PGIlr8R3G8S6rE0YL6SeQltvwnu+/hNjRHCg8QjJEvfBPe9ABljtR67ehYYb0zjIYACUI3X6jB0V5lHWNpqH4+AYa4rXqplmRfReJXlJS+ev4bgbuZfI0i+rmXML/A0LXnEy1934xYgVB+RWEuI55fViHkZo4cRPhC/7mDTakkEUY/bdYc3H8Y9AEsKKeBW4iWMQIjdNGK1v9wHl17k0XY9IB7VkoSWajcc8QMANYtLXq6PFc8jGUuQFB7x16q52y5SkdTVQyWJ8ixUrA74yXwA1KP63pbKShAWC7GoqkEaxs3HPfCsb2sklqw9KguOWwhKy9p6fdbuLat27iYsKmXJrtdCEFbDNLICn7WnO+BJO7MWF+147CrGBKGcxqos1V57uR+hZUgpyvIoVGwhMGXohrYYPp7vAUM7Ml5czU/JhBUrCsDKeL81ICfoI1ggQSgKYVUCLAqp1+73krk7SitY0oWwWgGYvxX54QHanSWpgBDwgVX9BLf3wM0BMteisloKq7aFdCA1Rdk+BE9apyjFaqWoqlJUUH+hPj7ThnZ+B6EoIg/7DHtYdLs/Ht4a5mZ4h7lnooAs2M0+fwNPm3GqqqqAegVwbNIvcJPfPw+Grq+HkZVlseAWitJOp7o3dV17+Qdx/3onvOh6j1V2nUBU1dyDY0NePUDPuv7rdfELwAtE321Pll2103VqC1EoQA5NFB2yzGlO3VnXX4y/wTzcqO08pt47AHimCb5G1sQpJUGUHyz71D3PTcJ9JqPpG+wdQi/13tqWfYoZDezNcRxCUse3DiQ/9boxAxjen16z3Init4g0A/srBiTGmjxNaew2WWDbSZQ30IicYcBwSOYtihOXxm/JaYIgw8AGxposDqOQuk0Uey61ouBkmtyLXtsZ8ahrWQGNaJrGpxEEez+yJnBJQPzYaVLqknQfRtlJ5/QTlJq6YeT7PgAQgde2ZVue7CBMgsDau1EaR66TBpmXOj3XOznMG5MY/krclKbUI4ltR8EhcEMI6wfESUnuOJ6fUWoDSB2S0twJ5wiUZoSmlvPKvVp7mCOHCEGWpAefOM3ehlUE4IV5ZMUOsfZB4jkHUGEEjRH4fm6FcRITK6IHK9s3adPQGdhOnPs0JAlNMkoOPuxUyHFL6wAgJkFAssg+7GMClSfOXIMd0dCP45CEYQ6/gob4e7j2Xv0gt+aVsEjk+UEU0cB/JRaAxktJFieQQhC7cZ43lm8BsAhIMoPAoVlMiAPAsvo/ATW586C+C78tAAAAAElFTkSuQmCC">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Our Diary">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;700&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<meta name="apple-mobile-web-app-title" content="Life Diary">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <style>
-*,*::before,*::after{box-sizing:border-box}
-html{color-scheme:light}
-@media (prefers-color-scheme: dark){html{color-scheme:dark}}
-body{margin:0}
-[hidden]{display:none!important}
-img{max-width:100%}
-
-/* Layout concept: a ledger-style shared diary. Days are numbered pages shown as index tabs, two facing leaves per page (one per partner), and weeks and months are files that seal themselves when they end. */
-:root{
-  --bg:#F1F5F2; --paper:#FFFFFF; --ink:#12201A; --muted:#5A6A62; --line:#D3DCD6;
-  --q:#0F6B45; --o:#2B54A6; --gold:#9A6A0C; --on:#FFFFFF;
-  --f-display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
-  --f-body:"Hanken Grotesk","Segoe UI",system-ui,sans-serif;
-  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#0C1411; --paper:#141F1A; --ink:#E8F0EB; --muted:#93A59B; --line:#27382F;
-    --q:#4CC18A; --o:#7FA6F0; --gold:#E2B54E; --on:#0C1411; color-scheme:dark;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#0C1411; --paper:#141F1A; --ink:#E8F0EB; --muted:#93A59B; --line:#27382F;
-  --q:#4CC18A; --o:#7FA6F0; --gold:#E2B54E; --on:#0C1411; color-scheme:dark;
-}
-body{
-  background:var(--bg); color:var(--ink); font-family:var(--f-body); font-size:16px; line-height:1.5;
-  padding-block:20px 48px;
-  padding-left:max(16px, env(safe-area-inset-left, 0px));
-  padding-right:max(16px, env(safe-area-inset-right, 0px));
-}
-.wrap{max-width:1040px;margin:0 auto}
-button{font:inherit;color:inherit}
-.mono{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px}
-.brand{min-width:0}
-h1{font-family:var(--f-display);font-weight:700;font-size:clamp(30px,6vw,48px);line-height:1.05;letter-spacing:-.02em;margin:6px 0 8px;text-wrap:balance}
-.amp{color:var(--gold)}
-.today{font-family:var(--f-mono);font-size:13px;color:var(--muted);margin:0}
-.who{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:14px;color:var(--muted)}
-.who strong{color:var(--ink)}
-.dot{display:inline-block;width:10px;height:10px;border-radius:50%;border:1.5px solid var(--line);flex:none}
-.dot.q{border-color:var(--q)} .dot.o{border-color:var(--o)}
-.dot.q.on{background:var(--q)} .dot.o.on{background:var(--o)}
-.dot.solid.q{background:var(--q)} .dot.solid.o{background:var(--o)}
-.link{background:none;border:0;padding:2px 4px;text-decoration:underline;color:var(--muted);cursor:pointer}
-.btn{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:9px 14px;font-weight:500;cursor:pointer;color:var(--ink)}
-.btn:hover:not(:disabled){border-color:var(--ink)}
-.btn:disabled{color:var(--muted);border-style:dashed;cursor:not-allowed}
-.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-:is(.btn,.tab,.pg,.row,.mcard,.link,.chip):focus-visible,:is(textarea,input):focus-visible{outline:2px solid var(--ink);outline-offset:2px}
-.gate{margin-top:20px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px;display:grid;gap:12px}
-.gate p{margin:0;max-width:62ch}
-.gate .opts{display:flex;flex-wrap:wrap;gap:10px}
-.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin:24px 0 20px}
-.tab{background:none;border:0;padding:10px 16px;cursor:pointer;color:var(--muted);font-weight:500;border-bottom:2px solid transparent;margin-bottom:-1px}
-.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--ink)}
-.badge{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:4px;border:1px solid var(--ink);white-space:nowrap}
-.badge.sealed{background:var(--ink);color:var(--bg)}
-.badge.upcoming{border-style:dashed;border-color:var(--muted);color:var(--muted)}
-.fileline{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:6px}
-.headrow{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
-h2{font-family:var(--f-display);font-weight:600;font-size:clamp(22px,3.6vw,32px);letter-spacing:-.01em;margin:0;text-wrap:balance}
-h3{font-family:var(--f-display);font-weight:600;font-size:19px;margin:0}
-.navbtns{display:flex;gap:8px;flex-wrap:wrap}
-.sub{margin:6px 0 16px;color:var(--muted);max-width:70ch}
-.pagerwrap{overflow-x:auto;padding-bottom:4px}
-.pager{display:grid;grid-template-columns:repeat(7,minmax(78px,1fr));gap:6px}
-.pg{display:flex;flex-direction:column;gap:2px;text-align:left;padding:10px;background:var(--paper);border:1px solid var(--line);border-radius:8px;cursor:pointer;min-width:0}
-.pg .pn{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.pg .pd{font-weight:600}
-.pg .dots2{display:flex;gap:4px;margin-top:4px}
-.pg[aria-current="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.pg[aria-current="true"] .pn{color:var(--bg);opacity:.75}
-.pg[aria-current="true"] .dot{border-color:var(--bg)}
-.pg[aria-current="true"] .dot.on{background:var(--bg)}
-.pg:disabled{border-style:dashed;color:var(--muted);cursor:not-allowed;background:transparent}
-.pagebar{margin:22px 0 12px;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline}
-.pagebar span{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.spread{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.leaf{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:14px;min-height:340px;min-width:0}
-.lhead{display:flex;align-items:center;gap:10px}
-.lhead .nm{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px;min-width:0}
-.lhead strong{font-family:var(--f-display);font-size:20px}
-.lhead .full{font-size:13px;color:var(--muted)}
-.you{font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);padding:1px 6px;border-radius:4px;color:var(--muted)}
-.lhead .dot{width:14px;height:14px}
-.label{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px}
-.chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{background:transparent;border:1px solid var(--line);border-radius:999px;padding:5px 12px;cursor:pointer;font-size:14px}
-.leaf.q .chip.on,.leaf.q .moodtag{background:var(--q);color:var(--on);border-color:var(--q)}
-.leaf.o .chip.on,.leaf.o .moodtag{background:var(--o);color:var(--on);border-color:var(--o)}
-.moodtag{align-self:flex-start;border:1px solid;border-radius:999px;padding:3px 12px;font-size:14px}
-textarea,input[type="text"]{width:100%;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:12px;font:inherit;font-size:16px;line-height:1.6}
-textarea{min-height:230px;resize:vertical}
-.entry{white-space:pre-wrap;line-height:1.65;max-width:65ch;margin:0;overflow-wrap:anywhere}
-.win{display:flex;gap:10px;align-items:baseline;padding-top:12px;border-top:1px dashed var(--line);overflow-wrap:anywhere}
-.win .k{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);flex:none}
-.empty{color:var(--muted);margin:0}
-.saved{font-family:var(--f-mono);font-size:12px;color:var(--muted);min-height:1.2em;margin-top:auto}
-.sealnote{font-size:13px;color:var(--muted);margin-top:auto}
-.list{display:grid;gap:8px}
-.row{display:grid;grid-template-columns:minmax(120px,1fr) auto auto;align-items:center;gap:8px 18px;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:14px 16px;cursor:pointer;width:100%}
-.row:hover:not(:disabled){border-color:var(--ink)}
-.row:disabled{border-style:dashed;cursor:not-allowed;color:var(--muted);background:transparent}
-.row .t{font-family:var(--f-display);font-weight:600;font-size:18px}
-.row .s{font-size:13px;color:var(--muted)}
-.dots{display:flex;gap:7px}
-.dc{display:flex;flex-direction:column;gap:3px}
-.facts{display:flex;flex-wrap:wrap;gap:6px 22px;margin:4px 0 18px;color:var(--muted);font-size:14px}
-.facts b{color:var(--ink);font-weight:600}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
-.mcard{display:flex;flex-direction:column;gap:10px;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:14px;cursor:pointer;min-width:0}
-.mcard:hover:not(:disabled){border-color:var(--ink)}
-.mcard:disabled{border-style:dashed;cursor:not-allowed;color:var(--muted);background:transparent}
-.mcard .t{font-family:var(--f-display);font-weight:600;font-size:19px}
-.mcard .top2{display:flex;justify-content:space-between;align-items:center;gap:8px}
-.meter{height:6px;border-radius:3px;background:var(--line);overflow:hidden}
-.meter i{display:block;height:100%}
-.meter.q i{background:var(--q)} .meter.o i{background:var(--o)}
-.mline{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);font-family:var(--f-mono)}
-.wins{margin-top:30px;display:grid;gap:10px}
-.wrow{display:grid;grid-template-columns:74px 14px minmax(0,1fr);gap:10px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--line)}
-.wrow .d{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
-.wrow p{margin:0;overflow-wrap:anywhere}
-.wrow .dot{position:relative;top:1px}
-.mh{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:16px 0 0}
-.status{font-family:var(--f-mono);font-size:12px;color:var(--muted);min-height:1.4em;margin:24px 0 0}
-.hero{display:grid;grid-template-columns:1.1fr .8fr 1.1fr;gap:8px;margin-top:20px}
-.hero button{padding:0;border:0;background:none;cursor:zoom-in;height:clamp(150px,26vw,260px);min-width:0}
-.hero img,.gal img{display:block;width:100%;height:100%;object-fit:cover;border-radius:10px;background:var(--line)}
-.gal{columns:3 220px;column-gap:10px}
-.gal button{display:block;width:100%;padding:0;border:0;background:none;margin:0 0 10px;cursor:zoom-in;break-inside:avoid}
-.gal img{height:auto}
-.lb{position:fixed;inset:0;z-index:50;background:rgba(8,14,11,.92);display:flex;align-items:center;justify-content:center;padding:20px}
-.lb img{max-width:100%;max-height:100%;border-radius:10px;object-fit:contain}
-.lb button{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:max(14px,env(safe-area-inset-right,0px));background:#fff;color:#12201A;border:0;border-radius:8px;padding:8px 14px;font-weight:600;cursor:pointer}
+:root{--bg:#f7f3ec;--card:#fffdf8;--ink:#2b2a27;--mute:#7a756b;--line:#e4ddcf;--accent:#1f6f5c;--accent-ink:#fff;--danger:#b3412f}
+@media (prefers-color-scheme:dark){:root{--bg:#171917;--card:#1f221f;--ink:#ece8de;--mute:#9a9588;--line:#31352f;--accent:#4fb89c;--accent-ink:#0d1512;--danger:#e07a68}}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Naskh Arabic",sans-serif}
+button,input,select,textarea{font:inherit;color:inherit}
+header.top{display:flex;align-items:center;gap:10px;padding:calc(10px + env(safe-area-inset-top,0px)) calc(14px + env(safe-area-inset-right,0px)) 10px calc(14px + env(safe-area-inset-left,0px));border-bottom:1px solid var(--line);background:var(--card);position:sticky;top:0;z-index:5}
+header.top h1{font-size:18px;margin:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn{border:1px solid var(--line);background:var(--card);padding:8px 12px;border-radius:10px;cursor:pointer;min-height:40px}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.danger{color:var(--danger)}
+.btn:active{transform:translateY(1px)}
+.app{display:grid;grid-template-columns:320px 1fr;height:calc(100% - 61px - env(safe-area-inset-top,0px))}
+aside{border-right:1px solid var(--line);overflow:auto;padding:12px}
+main{overflow:auto;padding:16px}
+.search{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);margin-bottom:10px}
+.item{display:block;width:100%;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:8px;cursor:pointer}
+.item.active{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.item .d{font-weight:600}
+.item .s{color:var(--mute);font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.item .b{font-size:12px;color:var(--accent)}
+.panel{max-width:760px;margin:0 auto}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.row>*{flex:1;min-width:140px}
+label{display:block;font-size:13px;color:var(--mute);margin:12px 0 4px;font-weight:600;letter-spacing:.02em}
+input[type=date],select,input[type=text]{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+textarea{width:100%;min-height:110px;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--card);resize:vertical}
+.hint{font-size:12px;color:var(--mute);margin-top:4px}
+.status{font-size:13px;color:var(--mute);min-height:20px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+.back{display:none}
+.empty{color:var(--mute);text-align:center;padding:40px 10px}
+.ach-day{margin-bottom:18px}
+.ach-day h3{margin:0 0 6px;font-size:15px;color:var(--accent)}
+.ach-day li{margin:3px 0}
+.profile{display:flex;gap:14px;align-items:center}
+.avatar{width:72px;height:72px;border-radius:50%;background:var(--line);object-fit:cover;flex:none}
+#sheet{display:none}
+#login{display:none;position:fixed;inset:0;z-index:50;align-items:center;justify-content:center;padding:16px;background:var(--bg)}
+body.locked #login{display:flex}
+body.locked header.top,body.locked .app{display:none!important}
+#login form{width:100%;max-width:360px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+#login h2{margin:0 0 4px;font-size:22px}
+#login p{margin:0 0 8px;color:var(--mute);font-size:14px}
+#login .err{color:var(--danger);font-size:14px;min-height:20px;margin-top:8px}
+#login .chk{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:14px;color:var(--mute)}
+#login .chk input{width:auto}
+#login input[type=email],#login input[type=password]{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+#login .btn{width:100%;margin-top:14px}
+body.hasbg{background-image:var(--bgimg);background-size:cover;background-position:center;background-attachment:fixed}
+body.hasbg header.top{background:color-mix(in srgb,var(--card) 88%,transparent)}
+body.hasbg aside,body.hasbg main{background:color-mix(in srgb,var(--bg) 80%,transparent)}
+.thumbs{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0}
+.thumb{position:relative}
+.thumb img{width:96px;height:96px;object-fit:cover;border-radius:10px;border:1px solid var(--line);display:block}
+.thumb button{position:absolute;top:-8px;right:-8px;width:26px;height:26px;border-radius:50%;border:1px solid var(--line);background:var(--card);cursor:pointer;line-height:1;padding:0}
+.bgprev{width:100%;max-width:320px;height:120px;object-fit:cover;border-radius:12px;border:1px solid var(--line);display:block;margin:8px 0}
 @media (max-width:760px){
-  .spread{grid-template-columns:minmax(0,1fr)}
-  .row{grid-template-columns:minmax(0,1fr) auto}
-  .row .dots{grid-column:1 / -1;order:3}
-  .leaf{min-height:0;padding:16px}
+ .app{grid-template-columns:1fr}
+ aside{display:block}
+ main{display:none}
+ body.edit aside{display:none}
+ body.edit main{display:block}
+ .back{display:inline-block}
 }
-@media (prefers-reduced-motion:no-preference){
-  .btn,.pg,.row,.mcard,.chip{transition:border-color .15s,background-color .15s}
+@media print{
+ @page{size:A4;margin:0}
+ *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ header.top,.app{display:none!important}
+ html,body{height:auto;background:#fff;color:#000}
+ #sheet{display:block}
 }
-
+#sheet{font-family:Georgia,"Noto Naskh Arabic",serif;color:#000;padding:0}
+#sheet .pg{page-break-after:always;min-height:296mm;padding:14mm;background-color:#fff;background-repeat:repeat-y;background-size:100% 296mm;background-position:top left}
+#sheet .pg:last-child{page-break-after:auto}
+#sheet .hd{display:flex;align-items:center;gap:14px;border-bottom:2px solid #1f6f5c;padding-bottom:10px;margin-bottom:14px}
+#sheet .hd img{width:64px;height:64px;border-radius:50%;object-fit:cover}
+#sheet .hd .n{font-size:20px;font-weight:700}
+#sheet .hd .t{color:#555;font-size:13px}
+#sheet h2{font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:#1f6f5c;margin:16px 0 4px}
+#sheet p,#sheet li{font-size:14px;margin:2px 0;white-space:pre-wrap}
+#sheet ul{margin:0;padding-left:20px}
+#sheet .ph{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+#sheet .ph img{width:48%;max-height:75mm;object-fit:cover;border-radius:4px}
+#sheet .sig{margin-top:30px;text-align:right}
+#sheet .sig .ar{font-size:30px;line-height:1.2}
+#sheet .sig .nm{font-size:12px;color:#555;border-top:1px solid #999;display:inline-block;padding-top:3px;margin-top:2px}
 </style>
 </head>
-<body>
-<div class="wrap">
-  <header class="top">
-    <div class="brand">
-      <span class="mono">Shared diary</span>
-      <h1>Quadri <span class="amp">&amp;</span> Olamide</h1>
-      <p class="today" id="today"></p>
-    </div>
-    <div class="who" id="who"></div>
-  </header>
-  <div class="hero" id="hero"></div>
-  <section id="gate"></section>
-  <nav class="tabs" id="tabs" role="tablist" aria-label="Diary view"></nav>
-  <main id="view"></main>
-  <p class="status" id="status" aria-live="polite"></p>
+<body class="locked">
+<div id="login">
+  <form id="loginForm" autocomplete="on">
+    <h2>My Life Diary</h2>
+    <p>Sign in to open your diary.</p>
+    <label for="lEmail">EMAIL</label>
+    <input id="lEmail" name="email" type="email" autocomplete="username" required>
+    <label for="lPass">PASSWORD</label>
+    <input id="lPass" name="password" type="password" autocomplete="current-password" required>
+    <label class="chk"><input id="lStay" type="checkbox" checked> Keep me signed in on this device</label>
+    <button class="btn primary" type="submit">Sign in</button>
+    <div class="err" id="lErr" role="alert"></div>
+  </form>
 </div>
-<div class="lb" id="lb" hidden><button id="lbx">Close</button><img id="lbi" alt=""></div>
+<header class="top">
+  <button class="btn back" id="backBtn" aria-label="Back to list">←</button>
+  <h1 id="title">My Life Diary</h1>
+  <button class="btn primary" id="todayBtn">Today</button>
+  <button class="btn" id="achBtn">Achievements</button>
+  <button class="btn" id="installBtn" hidden>Install</button>
+  <button class="btn" id="setBtn">⚙</button>
+  <button class="btn" id="outBtn" title="Sign out">Sign out</button>
+</header>
+
+<div class="app">
+  <aside>
+    <input class="search" id="search" type="text" placeholder="Search entries…" dir="auto">
+    <div id="list"></div>
+  </aside>
+  <main><div class="panel" id="panel"></div></main>
+</div>
+
+<div id="sheet"></div>
 
 <script>
 (function(){
 'use strict';
-var PEOPLE={quadri:{short:'Quadri',full:'Shittu Quadri Adeshina',cls:'q'},olamide:{short:'Olamide',full:'Ibrahim Raimo Olamide',cls:'o'}};
-var ORDER=['quadri','olamide'];
-var MOODS=['Radiant','Content','Calm','Tired','Heavy'];
-var MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
-var DAYS=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-var $=function(id){return document.getElementById(id)};
-var esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
-var pad=function(n){return String(n).padStart(2,'0')};
-var iso=function(y,m,d){return y+'-'+pad(m)+'-'+pad(d)};
-var dim=function(y,m){return new Date(y,m,0).getDate()};
-var TODAY=function(){
-  try{var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Africa/Lagos',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date()).reduce(function(a,x){a[x.type]=x.value;return a},{});return p.year+'-'+p.month+'-'+p.day}
-  catch(e){var t=new Date();return iso(t.getFullYear(),t.getMonth()+1,t.getDate())}
-};
-var parts=function(s){var a=s.split('-').map(Number);return {y:a[0],m:a[1],d:a[2]}};
-var weeksIn=function(y,m){return Math.ceil(dim(y,m)/7)};
-var wS=function(w){return (w-1)*7+1};
-var wE=function(y,m,w){return Math.min(w*7,dim(y,m))};
-var dayName=function(y,m,d){return DAYS[new Date(y,m-1,d).getDay()]};
-var rng=function(y,m,w){return wS(w)+'–'+wE(y,m,w)+' '+MONTHS[m-1]};
-function span(s,e){var t=TODAY();return t<s?'upcoming':(t>e?'sealed':'open')}
-var weekSt=function(y,m,w){return span(iso(y,m,wS(w)),iso(y,m,wE(y,m,w)))};
-var monthSt=function(y,m){return span(iso(y,m,1),iso(y,m,dim(y,m)))};
-var written=function(e){return !!e&&!!(((e.text||'').trim())||((e.win||'').trim())||e.mood)};
-var badge=function(st){return '<span class="badge '+st+'">'+({open:'Open',sealed:'Sealed',upcoming:'Not yet open'}[st])+'</span>'};
-
-var S={view:'week',y:0,m:0,w:0,d:0,shell:null,dataYear:null,entries:{},me:null,taken:{},ready:false,authMode:'login',authBusy:false,authErr:'',online:true,loaded:false};
-var timers={},inflight={},dirty={},drafts={};
-
-function say(t){$('status').textContent=t||''}
-function buildIdx(){
-  var out={};
-  Object.keys(S.entries).forEach(function(id){
-    var e=S.entries[id];
-    if(!written(e))return;
-    (out[e.date]=out[e.date]||{})[e.who]=e;
-  });
-  return out;
-}
-
-/* ---------- header, sign-in, tabs ---------- */
-function renderToday(){
-  var t=parts(TODAY());
-  var w=Math.ceil(t.d/7);
-  $('today').textContent=dayName(t.y,t.m,t.d)+' '+t.d+' '+MONTHS[t.m-1]+' '+t.y+' · Week '+w+', page '+(t.d-wS(w)+1);
-}
-function renderWho(){
-  var el=$('who');
-  if(S.me){
-    var p=PEOPLE[S.me];
-    el.innerHTML='<span class="dot solid '+p.cls+'"></span><span>Writing as <strong>'+p.short+'</strong></span><button class="link" data-act="logout">Log out</button>';
-  }else el.innerHTML='';
-}
-function renderGate(){
-  var el=$('gate'),loggedOut=S.ready&&!S.me;
-  $('tabs').hidden=loggedOut;$('view').hidden=loggedOut;$('hero').hidden=false;
-  if(!S.ready){el.innerHTML='<p class="empty" style="margin-top:20px">Opening the diary\u2026</p>';return}
-  if(S.me){el.innerHTML='';return}
-  var reg=S.authMode==='register',bothTaken=S.taken.quadri&&S.taken.olamide;
-  var h='<form class="gate" id="authform" novalidate><h3>'+(reg?'Create your account':'Log in to the diary')+'</h3>';
-  if(reg&&bothTaken)h+='<p>This diary already has its two accounts. Use Log in.</p>';
-  else{
-    if(reg){
-      h+='<div><span class="label">Who are you?</span><div class="chips">';
-      ORDER.forEach(function(k){var tk=S.taken[k];h+='<button type="button" class="chip'+(S.pickWho===k?' on':'')+'" data-act="pickwho" data-who="'+k+'"'+(tk?' disabled':'')+' aria-pressed="'+(S.pickWho===k)+'">'+PEOPLE[k].full+(tk?' (taken)':'')+'</button>'}) ;
-      h+='</div></div>';
-    }
-    h+='<div><label class="label" for="a-email">Email</label><input type="email" id="a-email" autocomplete="email" inputmode="email" value="'+esc(S.authEmail||'')+'" style="width:100%;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:12px;font:inherit;font-size:16px"></div>';
-    h+='<div><label class="label" for="a-pw">Password</label><input type="password" id="a-pw" autocomplete="'+(reg?'new-password':'current-password')+'" style="width:100%;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:12px;font:inherit;font-size:16px">'+(reg?'<span class="sealnote">At least 8 characters.</span>':'')+'</div>';
-    h+='<div class="opts"><button class="btn primary" type="submit"'+(S.authBusy?' disabled':'')+'>'+(S.authBusy?'Please wait\u2026':(reg?'Create account':'Log in'))+'</button></div>';
-  }
-  if(S.authErr)h+='<p role="alert" style="color:var(--gold)">'+esc(S.authErr)+'</p>';
-  h+='<p class="sealnote">'+(reg?'Already have an account?':'First time here?')+' <button type="button" class="link" data-act="authmode">'+(reg?'Log in':'Create an account')+'</button></p></form>';
-  el.innerHTML=h;
-}
-function renderTabs(){
-  var L={week:'Week',month:'Month',year:'Year',gallery:'Photos',account:'Account'};
-  $('tabs').innerHTML=['week','month','year','gallery','account'].map(function(v){
-    return '<button role="tab" class="tab" aria-selected="'+(S.view===v)+'" data-act="tab" data-v="'+v+'">'+L[v]+'</button>';
-  }).join('');
-}
-
-/* ---------- week view ---------- */
-function shiftWeek(dir){
-  var y=S.y,m=S.m,w=S.w;
-  if(dir>0){if(w<weeksIn(y,m)){w++}else{m++;if(m>12){m=1;y++}w=1}}
-  else{if(w>1){w--}else{m--;if(m<1){m=12;y--}w=weeksIn(y,m)}}
-  return {y:y,m:m,w:w};
-}
-function buildWeekShell(){
-  $('view').innerHTML='<section id="wkhead"></section><div class="pagerwrap"><div class="pager" id="pager"></div></div><div class="pagebar" id="pagebar"></div><div class="spread"><article class="leaf q" id="leaf-quadri"></article><article class="leaf o" id="leaf-olamide"></article></div>';
-}
-function leafHtml(who){
-  var date=iso(S.y,S.m,S.d),e=S.entries[date+'_'+who],p=PEOPLE[who],isMe=S.me===who;
-  var sealed=weekSt(S.y,S.m,S.w)==='sealed';
-  var editable=isMe&&!sealed&&date<=TODAY();
-  var h='<div class="lhead"><span class="dot solid '+p.cls+'"></span><div class="nm"><strong>'+p.short+'</strong>'+(isMe?'<span class="you">You</span>':'')+'<span class="full">'+p.full+'</span></div></div>';
-  if(editable){
-    var cur=(e&&e.mood)||'';
-    h+='<div><span class="label">Mood</span><div class="chips">'+MOODS.map(function(md){return '<button class="chip'+(cur===md?' on':'')+'" data-act="mood" data-mood="'+md+'" aria-pressed="'+(cur===md)+'">'+md+'</button>'}).join('')+'</div></div>';
-    h+='<div><label class="label" for="f-text">How the day went</label><textarea id="f-text" placeholder="Write today’s page here.">'+esc(e&&e.text)+'</textarea></div>';
-    h+='<div><label class="label" for="f-win">Win of the day</label><input type="text" id="f-win" maxlength="200" placeholder="One thing you achieved or are proud of" value="'+esc(e&&e.win)+'"></div>';
-    h+='<div class="saved" id="saved"></div>';
-  }else if(written(e)){
-    if(e.mood)h+='<span class="moodtag">'+esc(e.mood)+'</span>';
-    if((e.text||'').trim())h+='<p class="entry">'+esc(e.text)+'</p>';
-    if((e.win||'').trim())h+='<div class="win"><span class="k">Win</span><span>'+esc(e.win)+'</span></div>';
-    if(sealed)h+='<div class="sealnote">Sealed with its week file. This page is kept as written.</div>';
-  }else{
-    if(sealed)h+='<p class="empty">No page was written for this day.</p>';
-    else h+='<p class="empty">'+p.short+' has not written this page yet.</p>';
-  }
-  return h;
-}
-function skipLeaf(who){
-  if(who!==S.me)return false;
-  var date=iso(S.y,S.m,S.d),el=$('leaf-'+who),a=document.activeElement;
-  if(!el)return false;
-  if(timers[date]||inflight[date])return true;
-  return !!(a&&el.contains(a)&&a.matches('textarea,input'));
-}
-function updateWeek(){
-  var y=S.y,m=S.m,w=S.w,st=weekSt(y,m,w),idx=buildIdx(),e=wE(y,m,w),n=e-wS(w)+1;
-  var prev=shiftWeek(-1),next=shiftWeek(1);
-  var canPrev=prev.y>=2024,canNext=iso(next.y,next.m,wS(next.w))<=TODAY();
-  var note=st==='sealed'?'Closed after '+e+' '+MONTHS[m-1]+'. Pages are kept as written.':'Closes after '+e+' '+MONTHS[m-1]+'. The next week file opens the following morning.';
-  $('wkhead').innerHTML='<div class="fileline"><span class="mono">File '+y+'-'+pad(m)+' / W'+w+'</span>'+badge(st)+'</div>'+
-    '<div class="headrow"><h2>Week '+w+' of '+MONTHS[m-1]+' '+y+'</h2><div class="navbtns"><button class="btn" data-act="prevWeek"'+(canPrev?'':' disabled')+'>Earlier week</button><button class="btn" data-act="nextWeek"'+(canNext?'':' disabled')+'>Later week</button></div></div>'+
-    '<p class="sub">'+rng(y,m,w)+' · '+n+' pages. '+note+'</p>';
-  var h='';
-  for(var d=wS(w);d<=e;d++){
-    var date=iso(y,m,d),fut=date>TODAY(),row=idx[date]||{};
-    h+='<button class="pg" data-act="page" data-d="'+d+'" aria-current="'+(S.d===d)+'"'+(fut?' disabled':'')+' aria-label="Page '+(d-wS(w)+1)+', '+dayName(y,m,d)+' '+d+'">'+
-      '<span class="pn">Page '+(d-wS(w)+1)+'</span><span class="pd">'+dayName(y,m,d).slice(0,3)+' '+d+'</span>'+
-      '<span class="dots2"><i class="dot q'+(row.quadri?' on':'')+'"></i><i class="dot o'+(row.olamide?' on':'')+'"></i></span></button>';
-  }
-  $('pager').innerHTML=h;
-  $('pagebar').innerHTML='<h3>Page '+(S.d-wS(w)+1)+'</h3><span>'+dayName(y,m,S.d)+' '+S.d+' '+MONTHS[m-1]+' '+y+'</span>';
-  ORDER.forEach(function(k){
-    var el=$('leaf-'+k);
-    if(!el||skipLeaf(k))return;
-    el.innerHTML=leafHtml(k);
-  });
-}
-
-/* ---------- month view ---------- */
-function dotsFor(idx,y,m,from,to){
-  var h='<span class="dots">';
-  for(var d=from;d<=to;d++){
-    var r=idx[iso(y,m,d)]||{};
-    h+='<span class="dc"><i class="dot q'+(r.quadri?' on':'')+'"></i><i class="dot o'+(r.olamide?' on':'')+'"></i></span>';
-  }
-  return h+'</span>';
-}
-function winRows(list){
-  return list.map(function(x){
-    var p=parts(x.date);
-    return '<div class="wrow"><span class="d">'+p.d+' '+MONTHS[p.m-1].slice(0,3)+'</span><i class="dot solid '+PEOPLE[x.who].cls+'" title="'+PEOPLE[x.who].short+'"></i><p>'+esc(x.win)+'</p></div>';
-  }).join('');
-}
-function renderMonth(){
-  var y=S.y,m=S.m,idx=buildIdx(),st=monthSt(y,m),dm=dim(y,m),T=parts(TODAY());
-  var q=0,o=0,both=0,wins=[];
-  for(var d=1;d<=dm;d++){
-    var r=idx[iso(y,m,d)]||{};
-    if(r.quadri)q++; if(r.olamide)o++; if(r.quadri&&r.olamide)both++;
-    ORDER.forEach(function(k){if(r[k]&&(r[k].win||'').trim())wins.push({date:iso(y,m,d),who:k,win:r[k].win.trim()})});
-  }
-  wins.sort(function(a,b){return a.date<b.date?1:-1});
-  var pm=m===1?{y:y-1,m:12}:{y:y,m:m-1},nm=m===12?{y:y+1,m:1}:{y:y,m:m+1};
-  var canNext=iso(nm.y,nm.m,1)<=TODAY();
-  var h='<section><div class="fileline"><span class="mono">File '+y+'-'+pad(m)+'</span>'+badge(st)+'</div>'+
-    '<div class="headrow"><h2>'+MONTHS[m-1]+' '+y+'</h2><div class="navbtns"><button class="btn" data-act="prevMonth"'+(pm.y>=2024?'':' disabled')+'>Earlier month</button><button class="btn" data-act="nextMonth"'+(canNext?'':' disabled')+'>Later month</button></div></div>'+
-    '<p class="sub">'+dm+' days in '+weeksIn(y,m)+' week files. '+(st==='sealed'?'This month file is sealed.':'It seals after '+dm+' '+MONTHS[m-1]+' and the next month file opens.')+'</p>'+
-    '<div class="facts"><span>Quadri wrote <b>'+q+'</b> pages</span><span>Olamide wrote <b>'+o+'</b> pages</span><span>Both wrote on <b>'+both+'</b> days</span><span>Wins recorded <b>'+wins.length+'</b></span></div></section>';
-  h+='<div class="list">';
-  for(var w=1;w<=weeksIn(y,m);w++){
-    var ws=weekSt(y,m,w),from=wS(w),to=wE(y,m,w);
-    h+='<button class="row" data-act="openWeek" data-w="'+w+'"'+(ws==='upcoming'?' disabled':'')+'><span><span class="t">Week '+w+'</span><br><span class="s">'+rng(y,m,w)+' · File '+y+'-'+pad(m)+' / W'+w+'</span></span>'+dotsFor(idx,y,m,from,to)+badge(ws)+'</button>';
-  }
-  h+='</div>';
-  h+='<section class="wins"><h3>Wins this month</h3>'+(wins.length?winRows(wins):'<p class="empty">No wins recorded yet. Add one on any page and it appears here.</p>')+'</section>';
-  $('view').innerHTML=h;
-}
-
-/* ---------- year view ---------- */
-function renderYear(){
-  var y=S.y,idx=buildIdx(),c={},wins={},total={quadri:0,olamide:0},wn=0;
-  for(var i=1;i<=12;i++){c[i]={quadri:0,olamide:0};wins[i]=[]}
-  Object.keys(idx).forEach(function(date){
-    var p=parts(date);
-    if(p.y!==y)return;
-    ORDER.forEach(function(k){
-      var e=idx[date][k];
-      if(!e)return;
-      c[p.m][k]++; total[k]++;
-      if((e.win||'').trim()){wins[p.m].push({date:date,who:k,win:e.win.trim()});wn++}
-    });
-  });
-  var T=TODAY(),ty=parts(T);
-  var canNext=y<ty.y;
-  var h='<section><div class="fileline"><span class="mono">Year file '+y+'</span>'+badge(y<ty.y?'sealed':'open')+'</div>'+
-    '<div class="headrow"><h2>'+y+'</h2><div class="navbtns"><button class="btn" data-act="prevYear"'+(y>2024?'':' disabled')+'>Earlier year</button><button class="btn" data-act="nextYear"'+(canNext?'':' disabled')+'>Later year</button></div></div>'+
-    '<p class="sub">Twelve month files. Each one opens on the 1st and seals after its last day.</p>'+
-    '<div class="facts"><span>Quadri wrote <b>'+total.quadri+'</b> pages</span><span>Olamide wrote <b>'+total.olamide+'</b> pages</span><span>Wins recorded <b>'+wn+'</b></span></div></section><div class="grid">';
-  for(var m=1;m<=12;m++){
-    var st=monthSt(y,m),dm=dim(y,m);
-    var elapsed=st==='upcoming'?0:(st==='open'?ty.d:dm);
-    var pq=elapsed?Math.round(c[m].quadri/elapsed*100):0,po=elapsed?Math.round(c[m].olamide/elapsed*100):0;
-    h+='<button class="mcard" data-act="openMonth" data-m="'+m+'"'+(st==='upcoming'?' disabled':'')+'><div class="top2"><span class="t">'+MONTHS[m-1]+'</span>'+badge(st)+'</div>'+
-      '<div><div class="meter q"><i style="width:'+pq+'%"></i></div><div class="mline"><span>Quadri</span><span>'+c[m].quadri+'/'+dm+'</span></div></div>'+
-      '<div><div class="meter o"><i style="width:'+po+'%"></i></div><div class="mline"><span>Olamide</span><span>'+c[m].olamide+'/'+dm+'</span></div></div>'+
-      '<span class="s mono">'+wins[m].length+' wins</span></button>';
-  }
-  h+='</div><section class="wins"><h3>Wins of the year</h3>';
-  var any=false;
-  for(var mm=12;mm>=1;mm--){
-    if(!wins[mm].length)continue;
-    any=true;
-    wins[mm].sort(function(a,b){return a.date<b.date?1:-1});
-    h+='<p class="mh">'+MONTHS[mm-1]+'</p>'+winRows(wins[mm]);
-  }
-  if(!any)h+='<p class="empty">No wins recorded in '+y+' yet. Add one on any page and it appears here.</p>';
-  $('view').innerHTML=h+'</section>';
-}
-
-/* ---------- photos ---------- */
-var PHOTOS=[
-  ['red-portrait','Quadri and Olamide in white and green, red studio backdrop'],
-  ['cream-standing','The two of them standing together in white and black on a cream rug'],
-  ['aso-oke','Matching pink and peach traditional outfits'],
-  ['blue-selfie','Selfie in blue with white and blue flowers'],
-  ['studio-blue','Matching white tops and blue joggers with caps'],
-  ['green-selfie','Selfie against a green and white wall'],
-  ['amber-selfie','Selfie in white and black against an amber wall'],
-  ['lilac-selfie','Selfie in front of a green and cream panel'],
-  ['street-vhs','Street photo with a retro video stamp'],
-  ['door-casual','Casual photo in white tees in front of a black door']
+var KEY='lifeDiary.v1';
+var mem=null;
+var state={profile:{name:'Shittu AbdulQadir Adeshina',photo:''},entries:{}};
+var FIELDS=[
+ ['activities','Daily activities','What did you do today?'],
+ ['achievements','Achievements','One per line'],
+ ['reflections','Reflections','Thoughts, lessons, feelings…'],
+ ['gratitude','Grateful for',''],
+ ['plans','Plans for tomorrow','']
 ];
-var HERO=[0,2,3];
-function photoBtn(i){return '<button data-act="photo" data-i="'+i+'" aria-label="Open photo: '+esc(PHOTOS[i][1])+'"><img src="img/'+PHOTOS[i][0]+'.jpg" alt="'+esc(PHOTOS[i][1])+'" loading="lazy"></button>'}
-function renderHero(){$('hero').innerHTML=HERO.map(photoBtn).join('')}
-function renderGallery(){
-  $('view').innerHTML='<section><div class="fileline"><span class="mono">Keepsakes</span></div><h2>Our photos</h2><p class="sub">Tap a photo to see it full size.</p></section><div class="gal">'+PHOTOS.map(function(_,i){return photoBtn(i)}).join('')+'</div>';
-}
-function openPhoto(i){var im=$('lbi');im.src='img/'+PHOTOS[i][0]+'.jpg';im.alt=PHOTOS[i][1];$('lb').hidden=false}
-function closePhoto(){$('lb').hidden=true;$('lbi').removeAttribute('src')}
+var MOODS=['','😄 Great','🙂 Good','😐 Okay','😔 Low','😣 Hard'];
+var cur=todayStr();
+var view='entry';
+/* Faded photos used behind each PDF page. One is picked per page, the same one every time for a given day. */
+var PAGE_BGS=['assets/backgrounds/bg1.jpg','assets/backgrounds/bg2.jpg','assets/backgrounds/bg3.jpg','assets/backgrounds/bg4.jpg'];
 
-/* ---------- account and export ---------- */
-function field(id,label,type,auto){return '<div><label class="label" for="'+id+'">'+label+'</label><input type="'+type+'" id="'+id+'" autocomplete="'+auto+'" style="width:100%;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:12px;font:inherit;font-size:16px"></div>'}
-function renderAccount(){
-  var other=S.me==='quadri'?PEOPLE.olamide:PEOPLE.quadri;
-  var h='<section><div class="fileline"><span class="mono">Account</span></div><h2>Your account</h2><p class="sub">Signed in as '+esc(PEOPLE[S.me].full)+'.</p></section><div class="spread">';
-  h+='<form class="leaf" id="pwform" novalidate><h3>Change my password</h3>'+field('pw-cur','Current password','password','current-password')+field('pw-new','New password (8 or more characters)','password','new-password')+'<div><button class="btn primary" type="submit">Change password</button></div><p class="sealnote" id="pwmsg" role="status"></p></form>';
-  h+='<form class="leaf" id="rsform" novalidate><h3>Set a new password for '+other.short+'</h3><p class="sealnote">Use this if '+other.short+' forgot their password. Confirm with your own password.</p>'+field('rs-cur','Your password','password','current-password')+field('rs-new',other.short+'\u2019s new password','password','off')+'<div><button class="btn primary" type="submit">Set their password</button></div><p class="sealnote" id="rsmsg" role="status"></p></form>';
-  h+='</div><section class="wins"><h3>Download the diary</h3><p class="sub">Saves every page written in a year as a text file you can keep or print. Both of your pages are included.</p><div class="navbtns"><button class="btn" data-act="export" data-kind="year">Download '+S.y+'</button><button class="btn" data-act="export" data-kind="month">Download '+MONTHS[S.m-1]+' '+S.y+'</button></div><p class="sealnote" id="exmsg" role="status"></p></section>';
-  $('view').innerHTML=h;
+function load(){
+ try{var r=localStorage.getItem(KEY);if(r){var d=JSON.parse(r);if(d&&d.entries){state=d;state.profile=state.profile||{name:'',photo:''};}}}catch(e){if(mem)state=mem;}
 }
-async function accountCall(action,cur,np,msgId){
-  var el=$(msgId);el.textContent='Please wait\u2026';
-  try{
-    var r=await api('POST','/api/auth',{action:action,currentPassword:cur,newPassword:np});
-    el.textContent=r.ok?'Done. The new password works from now on.':(r.data&&r.data.error||'Could not change it.');
-    if(r.ok){['pw-cur','pw-new','rs-cur','rs-new'].forEach(function(i){var x=$(i);if(x)x.value=''})}
-  }catch(e){el.textContent='No connection. Try again when you are online.'}
+function save(){
+ mem=state;
+ try{localStorage.setItem(KEY,JSON.stringify(state));setStatus('Saved');}
+ catch(e){setStatus('Could not save in this browser. Use Backup to keep your data.');}
 }
-function exportDiary(kind){
-  var rows=Object.keys(S.entries).map(function(k){return S.entries[k]}).filter(written).filter(function(e){
-    var p=parts(e.date);return p.y===S.y&&(kind==='year'||p.m===S.m);
-  }).sort(function(a,b){return a.date<b.date?-1:a.date>b.date?1:(a.who<b.who?-1:1)});
-  var el=$('exmsg');
-  if(!rows.length){el.textContent='No pages written in that period yet.';return}
-  var out='QUADRI AND OLAMIDE DIARY\n'+(kind==='year'?S.y:MONTHS[S.m-1]+' '+S.y)+'\n\n',last='';
-  rows.forEach(function(e){
-    if(e.date!==last){var p=parts(e.date);out+='==== '+dayName(p.y,p.m,p.d)+' '+p.d+' '+MONTHS[p.m-1]+' '+p.y+' ====\n\n';last=e.date}
-    out+='-- '+PEOPLE[e.who].full+(e.mood?' ('+e.mood+')':'')+'\n';
-    if((e.text||'').trim())out+=e.text.trim()+'\n';
-    if((e.win||'').trim())out+='Win: '+e.win.trim()+'\n';
-    out+='\n';
+function setStatus(t){var s=document.getElementById('status');if(s)s.textContent=t;}
+function pad(n){return n<10?'0'+n:''+n}
+function todayStr(){var d=new Date();return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());}
+function parse(k){var p=k.split('-');return new Date(+p[0],+p[1]-1,+p[2]);}
+function fmt(k,long){return parse(k).toLocaleDateString(undefined,long?{weekday:'long',year:'numeric',month:'long',day:'numeric'}:{weekday:'short',year:'numeric',month:'short',day:'numeric'});}
+function el(tag,attrs,kids){
+ var e=document.createElement(tag);
+ if(attrs)for(var k in attrs){if(k==='text')e.textContent=attrs[k];else if(k==='on')for(var ev in attrs.on)e.addEventListener(ev,attrs.on[ev]);else e.setAttribute(k,attrs[k]);}
+ (kids||[]).forEach(function(c){if(c)e.appendChild(c);});
+ return e;
+}
+function lines(t){return (t||'').split('\n').map(function(s){return s.replace(/^\s*[-•*]\s*/,'').trim();}).filter(Boolean);}
+function hasContent(e){return e&&(FIELDS.some(function(f){return (e[f[0]]||'').trim();})||e.mood||(e.photos&&e.photos.length));}
+function resizeImage(file,max,q,cb){
+ var r=new FileReader();
+ r.onload=function(){var im=new Image();im.onload=function(){
+  var sc=Math.min(1,max/Math.max(im.width,im.height));
+  var c=document.createElement('canvas');c.width=Math.round(im.width*sc);c.height=Math.round(im.height*sc);
+  c.getContext('2d').drawImage(im,0,0,c.width,c.height);
+  cb(c.toDataURL('image/jpeg',q));
+ };im.onerror=function(){setStatus('Could not read that image.');};im.src=r.result;};
+ r.readAsDataURL(file);
+}
+function applyBg(){
+ var b=state.profile&&state.profile.bg;
+ if(b){document.body.style.setProperty('--bgimg','url("'+b+'")');document.body.classList.add('hasbg');}
+ else{document.body.style.removeProperty('--bgimg');document.body.classList.remove('hasbg');}
+}
+function bgFor(key){
+ var h=0;for(var i=0;i<key.length;i++)h=(h*31+key.charCodeAt(i))>>>0;
+ return PAGE_BGS[h%PAGE_BGS.length];
+}
+function printWhenReady(urls){
+ var left=urls.length,done=false;
+ function go(){if(done)return;done=true;window.print();}
+ if(!left){go();return;}
+ urls.forEach(function(u){
+  var im=new Image();
+  im.onload=im.onerror=function(){left--;if(left<=0)go();};
+  im.src=u;
+ });
+ setTimeout(go,3000);
+}
+
+function renderList(){
+ var q=document.getElementById('search').value.trim().toLowerCase();
+ var box=document.getElementById('list');box.innerHTML='';
+ var keys=Object.keys(state.entries).sort().reverse().filter(function(k){
+  if(!q)return true;var e=state.entries[k];
+  return (k+' '+FIELDS.map(function(f){return e[f[0]]||''}).join(' ')).toLowerCase().indexOf(q)>-1;
+ });
+ if(!keys.length){box.appendChild(el('div',{class:'empty',text:q?'No matches.':'No entries yet. Tap Today to write your first one.'}));return;}
+ keys.forEach(function(k){
+  var e=state.entries[k];
+  var snip=(e.activities||e.reflections||e.achievements||'').replace(/\s+/g,' ').trim();
+  var n=lines(e.achievements).length;
+  var kids=[el('div',{class:'d',text:fmt(k)}),el('div',{class:'s',dir:'auto',text:snip||'(empty)'})];
+  var meta=[];
+  if(n)meta.push('★ '+n+' achievement'+(n>1?'s':''));
+  if(e.photos&&e.photos.length)meta.push('📷 '+e.photos.length);
+  if(meta.length)kids.push(el('div',{class:'b',text:meta.join('  ·  ')}));
+  box.appendChild(el('button',{class:'item'+(view==='entry'&&k===cur?' active':''),on:{click:function(){openEntry(k);}}},kids));
+ });
+}
+
+function openEntry(k){cur=k;view='entry';document.body.classList.add('edit');render();}
+
+function renderEntry(){
+ var p=document.getElementById('panel');p.innerHTML='';
+ var e=state.entries[cur]||{};
+ document.getElementById('title').textContent=fmt(cur);
+ var dateIn=el('input',{type:'date',value:cur,on:{change:function(){if(this.value)openEntry(this.value);}}});
+ var mood=el('select',{on:{change:function(){upd('mood',this.value);}}},MOODS.map(function(m){var o=el('option',{value:m,text:m||'Mood (optional)'});if(m===(e.mood||''))o.selected=true;return o;}));
+ p.appendChild(el('div',{class:'row'},[el('div',{},[el('label',{text:'DATE'}),dateIn]),el('div',{},[el('label',{text:'MOOD'}),mood])]));
+ FIELDS.forEach(function(f){
+  var ta=el('textarea',{dir:'auto',placeholder:f[2],'aria-label':f[1]});
+  ta.value=e[f[0]]||'';
+  ta.addEventListener('input',function(){upd(f[0],ta.value);});
+  p.appendChild(el('label',{text:f[1].toUpperCase()}));
+  p.appendChild(ta);
+ });
+ p.appendChild(el('label',{text:'PHOTOS'}));
+ var thumbs=el('div',{class:'thumbs'});
+ (e.photos||[]).forEach(function(src,i){
+  thumbs.appendChild(el('div',{class:'thumb'},[el('img',{src:src,alt:'Photo '+(i+1)}),
+   el('button',{'aria-label':'Remove photo',text:'×',on:{click:function(){removePhoto(i);}}})]));
+ });
+ p.appendChild(thumbs);
+ var pin=el('input',{type:'file',accept:'image/*',multiple:'multiple',style:'display:none'});
+ pin.addEventListener('change',function(){addPhotos(pin.files);pin.value='';});
+ p.appendChild(el('button',{class:'btn',text:'＋ Add photos',on:{click:function(){pin.click();}}}));
+ p.appendChild(pin);
+ p.appendChild(el('div',{class:'hint',text:'Photos are shrunk to save space. Arabic and other right-to-left text is supported.'}));
+ p.appendChild(el('div',{class:'actions'},[
+  el('button',{class:'btn primary',text:'Save as PDF',on:{click:function(){printKeys([cur]);}}}),
+  el('button',{class:'btn danger',text:'Delete entry',on:{click:delEntry}})
+ ]));
+ p.appendChild(el('div',{class:'status',id:'status',text:state.entries[cur]?'Saved':'Not saved yet. Start typing.'}));
+}
+
+function upd(f,v){
+ var e=state.entries[cur]||(state.entries[cur]={});
+ e[f]=v;e.updated=Date.now();
+ if(!hasContent(e)){delete state.entries[cur];}
+ save();renderList();
+}
+function addPhotos(files){
+ var list=Array.prototype.slice.call(files||[]);if(!list.length)return;
+ var pending=list.length;
+ list.forEach(function(f){
+  resizeImage(f,1000,.8,function(d){
+   var e=state.entries[cur]||(state.entries[cur]={});
+   (e.photos=e.photos||[]).push(d);e.updated=Date.now();
+   pending--;
+   if(!pending){save();renderEntry();renderList();}
   });
-  var name='diary-'+(kind==='year'?S.y:S.y+'-'+pad(S.m))+'.txt';
-  try{
-    var blob=new Blob([out],{type:'text/plain;charset=utf-8'}),u=URL.createObjectURL(blob),a=document.createElement('a');
-    a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();
-    setTimeout(function(){URL.revokeObjectURL(u)},4000);
-    el.textContent='Saved '+rows.length+' pages to '+name+'.';
-  }catch(e){el.textContent='Could not save the file on this device.'}
+ });
+}
+function removePhoto(i){
+ var e=state.entries[cur];if(!e||!e.photos)return;
+ e.photos.splice(i,1);if(!e.photos.length)delete e.photos;
+ if(!hasContent(e))delete state.entries[cur];
+ save();renderEntry();renderList();
+}
+function delEntry(){
+ if(!state.entries[cur]){return;}
+ if(!confirm('Delete the entry for '+fmt(cur)+'?'))return;
+ delete state.entries[cur];save();renderEntry();renderList();
 }
 
-/* ---------- view control ---------- */
-function updateView(){
-  renderToday();renderWho();renderGate();renderTabs();
-  if(S.view==='week'){
-    if(S.shell!=='week'){buildWeekShell();S.shell='week'}
-    updateWeek();
-  }else{
-    S.shell=S.view;
-    if(S.view==='month')renderMonth(); else if(S.view==='gallery')renderGallery(); else if(S.view==='account'){if(!$('pwform'))renderAccount()} else renderYear();
-  }
-}
-function ensureYear(force){
-  if(!S.me)return;
-  if(S.dataYear===S.y&&!force)return;
-  if(S.dataYear!==S.y){S.dataYear=S.y;S.entries=cacheRead(S.y)||{}}
-  pull();
-}
-var pulling=false;
-async function pull(){
-  if(!S.me||pulling)return;
-  pulling=true;
-  var y=S.y;
-  try{
-    var r=await api('GET','/api/entries?year='+y);
-    if(r.status===401){S.me=null;S.ready=true;updateView();return}
-    if(r.ok&&y===S.y){
-      var o=r.data.entries||{};
-      Object.keys(drafts).forEach(function(date){var dr=drafts[date];if(dr&&dr.pending){o[date+'_'+dr.who]=dr}});
-      S.entries=o;S.loaded=true;cacheWrite(y,r.data.entries);setOnline(true);updateView();
-    }
-  }catch(e){setOnline(false)}
-  finally{pulling=false}
-}
-function setView(v,patch){
-  flushPendings();
-  if(document.activeElement&&document.activeElement.blur)document.activeElement.blur();
-  Object.assign(S,patch||{});
-  S.view=v;
-  if(v!=='week')S.shell=null; else if(S.shell!=='week')S.shell=null;
-  ensureYear();
-  updateView();
-  window.scrollTo&&window.scrollTo(0,0);
-}
-function openWeek(y,m,w){
-  var T=TODAY(),s=iso(y,m,wS(w)),e=iso(y,m,wE(y,m,w));
-  var d=(T>=s&&T<=e)?parts(T).d:wS(w);
-  setView('week',{y:y,m:m,w:w,d:d});
+function renderAch(){
+ var p=document.getElementById('panel');p.innerHTML='';
+ document.getElementById('title').textContent='Achievements';
+ var keys=Object.keys(state.entries).sort().reverse().filter(function(k){return lines(state.entries[k].achievements).length;});
+ var total=0;
+ keys.forEach(function(k){total+=lines(state.entries[k].achievements).length;});
+ p.appendChild(el('div',{class:'row'},[el('div',{},[el('strong',{text:total+' achievement'+(total===1?'':'s')+' across '+keys.length+' day'+(keys.length===1?'':'s')})]),
+  el('button',{class:'btn',text:'Save as PDF',on:{click:function(){printAch(keys);}}})]));
+ if(!keys.length)p.appendChild(el('div',{class:'empty',text:'Achievements you add to daily entries appear here, newest first.'}));
+ keys.forEach(function(k){
+  var ul=el('ul',{dir:'auto'},lines(state.entries[k].achievements).map(function(t){return el('li',{text:t});}));
+  p.appendChild(el('div',{class:'ach-day'},[el('h3',{text:fmt(k)}),ul]));
+ });
 }
 
-/* ---------- server calls ---------- */
-async function api(method,url,data){
-  var opt={method:method,headers:{},credentials:'same-origin'};
-  if(data){opt.headers['Content-Type']='application/json';opt.body=JSON.stringify(data)}
-  var res=await fetch(url,opt),j={};
-  try{j=await res.json()}catch(e){}
-  return {ok:res.ok,status:res.status,data:j};
+function renderSettings(){
+ var p=document.getElementById('panel');p.innerHTML='';
+ document.getElementById('title').textContent='Settings & backup';
+ var img=el('img',{class:'avatar',alt:'Your photo'});if(state.profile.photo)img.src=state.profile.photo;
+ var file=el('input',{type:'file',accept:'image/*'});
+ file.addEventListener('change',function(){
+  var f=file.files&&file.files[0];if(!f)return;
+  var r=new FileReader();
+  r.onload=function(){var im=new Image();im.onload=function(){
+   var s=256,c=document.createElement('canvas');c.width=c.height=s;
+   var m=Math.min(im.width,im.height),sx=(im.width-m)/2,sy=(im.height-m)/2;
+   c.getContext('2d').drawImage(im,sx,sy,m,m,0,0,s,s);
+   state.profile.photo=c.toDataURL('image/jpeg',.85);save();img.src=state.profile.photo;
+  };im.src=r.result;};
+  r.readAsDataURL(f);
+ });
+ var nm=el('input',{type:'text',dir:'auto',value:state.profile.name||''});
+ nm.addEventListener('input',function(){state.profile.name=nm.value;save();});
+ p.appendChild(el('div',{class:'profile'},[img,el('div',{style:'flex:1'},[el('label',{text:'YOUR NAME (SHOWN ON PDFs)'}),nm])]));
+ p.appendChild(el('label',{text:'PHOTO (SHOWN IN PDF HEADER)'}));
+ p.appendChild(file);
+ p.appendChild(el('label',{text:'BACKGROUND PHOTO (BEHIND THE APP)'}));
+ if(state.profile.bg)p.appendChild(el('img',{class:'bgprev',src:state.profile.bg,alt:'Background preview'}));
+ var bgIn=el('input',{type:'file',accept:'image/*',style:'display:none'});
+ bgIn.addEventListener('change',function(){
+  var f=bgIn.files&&bgIn.files[0];if(!f)return;
+  resizeImage(f,1600,.75,function(d){state.profile.bg=d;save();applyBg();renderSettings();});
+ });
+ p.appendChild(el('div',{class:'actions',style:'margin:8px 0'},[
+  el('button',{class:'btn',text:state.profile.bg?'Change background':'Choose background',on:{click:function(){bgIn.click();}}}),
+  state.profile.bg?el('button',{class:'btn danger',text:'Remove',on:{click:function(){delete state.profile.bg;save();applyBg();renderSettings();}}}):null,
+  bgIn
+ ]));
+ p.appendChild(el('label',{text:'INSTALL AS AN APP'}));
+ p.appendChild(el('div',{class:'hint',text:'Android or computer: tap the Install button at the top, or use the browser menu and choose Install app. iPhone: tap Share, then Add to Home Screen. Open the diary from the home screen icon afterwards.'}));
+ p.appendChild(el('label',{text:'BACKUP'}));
+ p.appendChild(el('div',{class:'hint',text:'Your diary is stored only in this browser. Export a backup regularly, and import it to restore or move to another device.'}));
+ var imp=el('input',{type:'file',accept:'application/json,.json',style:'display:none'});
+ imp.addEventListener('change',function(){
+  var f=imp.files&&imp.files[0];if(!f)return;
+  var r=new FileReader();
+  r.onload=function(){
+   try{
+    var d=JSON.parse(r.result);if(!d||typeof d.entries!=='object')throw 0;
+    var n=0;for(var k in d.entries){if(/^\d{4}-\d{2}-\d{2}$/.test(k)){state.entries[k]=d.entries[k];n++;}}
+    if(d.profile){if(d.profile.name)state.profile.name=d.profile.name;if(d.profile.photo)state.profile.photo=d.profile.photo;if(d.profile.bg)state.profile.bg=d.profile.bg;}
+    save();applyBg();renderList();alert('Imported '+n+' entries.');
+   }catch(x){alert('That file is not a valid diary backup.');}
+  };r.readAsText(f);
+ });
+ p.appendChild(el('div',{class:'actions'},[
+  el('button',{class:'btn primary',text:'Export backup',on:{click:exportJSON}}),
+  el('button',{class:'btn',text:'Import backup',on:{click:function(){imp.click();}}}),
+  el('button',{class:'btn',text:'Save ALL entries as PDF',on:{click:function(){printKeys(Object.keys(state.entries).sort());}}}),
+  imp
+ ]));
 }
-function setOnline(v){
-  if(S.online===v)return;
-  S.online=v;
-  say(v?'':'You are offline. Pages you write are kept on this device and sent when you are back online.');
-}
-function cacheRead(y){try{return JSON.parse(localStorage.getItem('diary-cache-'+y)||'null')}catch(e){return null}}
-function cacheWrite(y,o){try{localStorage.setItem('diary-cache-'+y,JSON.stringify(o||{}))}catch(e){}}
-function pendingSave(){
-  try{
-    var o={};Object.keys(drafts).forEach(function(k){if(drafts[k]&&drafts[k].pending)o[k]=drafts[k]});
-    localStorage.setItem('diary-pending',JSON.stringify(o));
-  }catch(e){}
-}
-function pendingLoad(){try{var o=JSON.parse(localStorage.getItem('diary-pending')||'{}');Object.keys(o).forEach(function(k){drafts[k]=o[k]})}catch(e){}}
 
-/* ---------- saving ---------- */
-function setSaved(t){var el=$('saved');if(el)el.textContent=t}
-function collect(){
-  var date=iso(S.y,S.m,S.d),chip=document.querySelector('#leaf-'+S.me+' .chip.on');
-  return {date:date,who:S.me,mood:chip?chip.dataset.mood:'',text:$('f-text').value,win:$('f-win').value,pending:true};
+function exportJSON(){
+ var blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});
+ var a=document.createElement('a');a.href=URL.createObjectURL(blob);
+ a.download='life-diary-backup-'+todayStr()+'.json';
+ document.body.appendChild(a);a.click();
+ setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},500);
 }
-function onEdit(){
-  if(!S.me||!$('f-text'))return;
-  var dr=collect();drafts[dr.date]=dr;pendingSave();
-  S.entries[dr.date+'_'+dr.who]=dr;
-  setSaved('Saving\u2026');
-  clearTimeout(timers[dr.date]);
-  timers[dr.date]=setTimeout(function(){timers[dr.date]=null;flush(dr.date)},700);
+
+function sheetHeader(sub){
+ var hd=el('div',{class:'hd'});
+ if(state.profile.photo)hd.appendChild(el('img',{src:state.profile.photo,alt:''}));
+ hd.appendChild(el('div',{},[el('div',{class:'n',text:state.profile.name||'My Life Diary'}),el('div',{class:'t',text:sub})]));
+ return hd;
 }
-function flushPendings(){
-  Object.keys(timers).forEach(function(date){
-    if(timers[date]){clearTimeout(timers[date]);timers[date]=null;flush(date)}
+function signature(){
+ return el('div',{class:'sig'},[el('div',{class:'ar',dir:'rtl',text:'عبدالقادر'}),el('div',{class:'nm',text:state.profile.name||''})]);
+}
+function printKeys(keys){
+ var s=document.getElementById('sheet');s.innerHTML='';
+ var used=[];
+ keys.forEach(function(k){
+  var e=state.entries[k];if(!e)return;
+  var pg=el('div',{class:'pg'});
+  var bg=bgFor(k);if(used.indexOf(bg)<0)used.push(bg);
+  pg.style.backgroundImage='url("'+bg+'")';
+  pg.appendChild(sheetHeader('Daily diary · '+fmt(k,true)+(e.mood?' · '+e.mood:'')));
+  FIELDS.forEach(function(f){
+   var v=(e[f[0]]||'').trim();if(!v)return;
+   pg.appendChild(el('h2',{text:f[1]}));
+   if(f[0]==='achievements'){pg.appendChild(el('ul',{dir:'auto'},lines(v).map(function(t){return el('li',{text:t});})));}
+   else pg.appendChild(el('p',{dir:'auto',text:v}));
   });
-}
-async function flush(date){
-  if(inflight[date]){dirty[date]=true;return}
-  inflight[date]=true;
-  try{
-    do{
-      dirty[date]=false;
-      var dr=drafts[date];
-      if(!dr)break;
-      var r=await api('PUT','/api/entries',{date:date,mood:dr.mood,text:dr.text,win:dr.win});
-      if(r.status===401){S.me=null;updateView();break}
-      if(!r.ok){
-        delete drafts[date];pendingSave();
-        setSaved(r.data&&r.data.error||'Not saved.');
-        say(r.data&&r.data.error||'');
-        pull();
-        break;
-      }
-      setOnline(true);
-      if(!dirty[date]){delete drafts[date];pendingSave()}
-      var id=date+'_'+dr.who;
-      if(r.data.entry)S.entries[id]=r.data.entry; else delete S.entries[id];
-      setSaved('Saved');
-    }while(dirty[date]);
-  }catch(err){
-    setOnline(false);
-    setSaved('Kept on this device. Will send when online.');
-  }finally{
-    inflight[date]=false;
-    updateView();
+  if(e.photos&&e.photos.length){
+   pg.appendChild(el('h2',{text:'Photos'}));
+   pg.appendChild(el('div',{class:'ph'},e.photos.map(function(src){return el('img',{src:src,alt:''});})));
   }
+  pg.appendChild(signature());
+  s.appendChild(pg);
+ });
+ if(!s.firstChild){alert('Nothing to export yet. Write an entry first.');return;}
+ printWhenReady(used);
 }
-async function syncPending(){
-  var ks=Object.keys(drafts).filter(function(k){return drafts[k]&&drafts[k].pending&&!inflight[k]&&!timers[k]});
-  for(var i=0;i<ks.length;i++)await flush(ks[i]);
+function printAch(keys){
+ var s=document.getElementById('sheet');s.innerHTML='';
+ var pg=el('div',{class:'pg'});
+ var bg=bgFor('achievements-'+todayStr());
+ pg.style.backgroundImage='url("'+bg+'")';
+ pg.appendChild(sheetHeader('Achievements'));
+ keys.forEach(function(k){
+  pg.appendChild(el('h2',{text:fmt(k,true)}));
+  pg.appendChild(el('ul',{dir:'auto'},lines(state.entries[k].achievements).map(function(t){return el('li',{text:t});})));
+ });
+ pg.appendChild(signature());
+ s.appendChild(pg);
+ printWhenReady([bg]);
 }
 
-/* ---------- account ---------- */
-async function loadMe(){
-  try{
-    var r=await api('GET','/api/me');
-    if(r.ok){S.me=r.data.who;S.taken=r.data.taken||{};setOnline(true)}
-  }catch(e){
-    setOnline(false);
-    try{var c=JSON.parse(localStorage.getItem('diary-me')||'null');if(c&&c.who)S.me=c.who}catch(x){}
-  }
-  try{if(S.me)localStorage.setItem('diary-me',JSON.stringify({who:S.me}));else if(S.online)localStorage.removeItem('diary-me')}catch(x){}
-  S.ready=true;
+function render(){
+ if(view==='entry')renderEntry();else if(view==='ach')renderAch();else renderSettings();
+ renderList();
 }
-async function submitAuth(){
-  var email=($('a-email')||{}).value||'',pw=($('a-pw')||{}).value||'';
-  S.authEmail=email;S.authErr='';
-  if(S.authMode==='register'&&!S.pickWho){S.authErr='Choose Quadri or Olamide first.';renderGate();return}
-  S.authBusy=true;renderGate();
-  try{
-    var r=await api('POST','/api/auth',{action:S.authMode,email:email,password:pw,who:S.pickWho});
-    if(!r.ok){S.authErr=r.data&&r.data.error||'Could not sign in.';S.authBusy=false;renderGate();return}
-    S.authBusy=false;S.authErr='';
-    await loadMe();
-    ensureYear(true);updateView();
-  }catch(e){S.authBusy=false;S.authErr='No connection. Try again when you are online.';renderGate()}
-}
-async function logout(){
-  flushPendings();
-  try{await api('POST','/api/auth',{action:'logout'})}catch(e){}
-  try{localStorage.removeItem('diary-me');localStorage.removeItem('diary-pending')}catch(e){}
-  drafts={};S.me=null;S.entries={};S.dataYear=null;S.authMode='login';updateView();
-}
+function go(v){view=v;document.body.classList.add('edit');render();}
 
-/* ---------- events ---------- */
-document.addEventListener('click',function(ev){
-  var b=ev.target.closest('[data-act]');
-  if(!b||b.disabled)return;
-  var a=b.dataset.act,t=parts(TODAY());
-  if(a==='tab'){
-    var v=b.dataset.v;
-    if(v===S.view)return;
-    if(v==='week'){
-      if(S.y===t.y&&S.m===t.m)openWeek(S.y,S.m,Math.ceil(t.d/7)); else openWeek(S.y,S.m,1);
-    }else setView(v);
+document.getElementById('todayBtn').addEventListener('click',function(){openEntry(todayStr());});
+document.getElementById('achBtn').addEventListener('click',function(){go('ach');});
+document.getElementById('setBtn').addEventListener('click',function(){go('settings');});
+document.getElementById('backBtn').addEventListener('click',function(){document.body.classList.remove('edit');document.getElementById('title').textContent='My Life Diary';});
+document.getElementById('search').addEventListener('input',renderList);
+
+/* ---- Sign-in gate (client-side convenience lock; see note in the app guide) ---- */
+function sha256(ascii){
+ function rr(v,a){return (v>>>a)|(v<<(32-a));}
+ var mp=Math.pow,mw=mp(2,32),i,j,res='',words=[],bl=ascii.length*8;
+ var hash=sha256.h=sha256.h||[],k=sha256.k=sha256.k||[],pc=k.length,comp={};
+ for(var c=2;pc<64;c++){if(!comp[c]){for(i=0;i<313;i+=c)comp[i]=c;hash[pc]=(mp(c,.5)*mw)|0;k[pc++]=(mp(c,1/3)*mw)|0;}}
+ ascii+='\x80';while(ascii.length%64-56)ascii+='\x00';
+ for(i=0;i<ascii.length;i++){j=ascii.charCodeAt(i);words[i>>2]|=j<<((3-i)%4)*8;}
+ words[words.length]=((bl/mw)|0);words[words.length]=bl;
+ for(j=0;j<words.length;){
+  var w=words.slice(j,j+=16),old=hash;hash=hash.slice(0,8);
+  for(i=0;i<64;i++){
+   var w15=w[i-15],w2=w[i-2],a=hash[0],e=hash[4];
+   var t1=hash[7]+(rr(e,6)^rr(e,11)^rr(e,25))+((e&hash[5])^((~e)&hash[6]))+k[i]+(w[i]=(i<16)?w[i]:(w[i-16]+(rr(w15,7)^rr(w15,18)^(w15>>>3))+w[i-7]+(rr(w2,17)^rr(w2,19)^(w2>>>10)))|0);
+   var t2=(rr(a,2)^rr(a,13)^rr(a,22))+((a&hash[1])^(a&hash[2])^(hash[1]&hash[2]));
+   hash=[(t1+t2)|0].concat(hash);hash[4]=(hash[4]+t1)|0;
   }
-  else if(a==='page'){flushPendings();S.d=+b.dataset.d;S.shell='week';updateView()}
-  else if(a==='prevWeek'){var p=shiftWeek(-1);openWeek(p.y,p.m,p.w)}
-  else if(a==='nextWeek'){var n=shiftWeek(1);openWeek(n.y,n.m,n.w)}
-  else if(a==='openWeek'){openWeek(S.y,S.m,+b.dataset.w)}
-  else if(a==='openMonth'){setView('month',{m:+b.dataset.m})}
-  else if(a==='prevMonth'){var pm=S.m===1?{y:S.y-1,m:12}:{y:S.y,m:S.m-1};setView('month',pm)}
-  else if(a==='nextMonth'){var nm=S.m===12?{y:S.y+1,m:1}:{y:S.y,m:S.m+1};setView('month',nm)}
-  else if(a==='prevYear'){setView('year',{y:S.y-1})}
-  else if(a==='nextYear'){setView('year',{y:S.y+1})}
-  else if(a==='photo'){openPhoto(+b.dataset.i)}
-  else if(a==='logout'){logout()}
-  else if(a==='export'){exportDiary(b.dataset.kind)}
-  else if(a==='authmode'){S.authMode=S.authMode==='login'?'register':'login';S.authErr='';renderGate()}
-  else if(a==='pickwho'){S.pickWho=b.dataset.who;renderGate()}
-  else if(a==='mood'){
-    var on=b.classList.contains('on');
-    document.querySelectorAll('#leaf-'+S.me+' .chip').forEach(function(c){c.classList.remove('on');c.setAttribute('aria-pressed','false')});
-    if(!on){b.classList.add('on');b.setAttribute('aria-pressed','true')}
-    onEdit();
-  }
+  for(i=0;i<8;i++)hash[i]=(hash[i]+old[i])|0;
+ }
+ for(i=0;i<8;i++)for(j=3;j+1;j--){var b=(hash[i]>>(j*8))&255;res+=((b<16)?0:'')+b.toString(16);}
+ return res;
+}
+var AUTH_SALT='74c6955d7ca9464f';
+var AUTH_HASH='7942fcbfca25fda665ce744444e2fdb96d70ca1943264cc703499ef0b35fb9f7';
+var TOKEN_KEY='lifeDiary.auth';
+function credHash(email,pass){return sha256(AUTH_SALT+unescape(encodeURIComponent(email.trim().toLowerCase()+':'+pass)));}
+function unlock(){document.body.classList.remove('locked');}
+function lock(){document.body.classList.add('locked');}
+function isSignedIn(){
+ try{if(localStorage.getItem(TOKEN_KEY)===AUTH_HASH)return true;}catch(e){}
+ try{if(sessionStorage.getItem(TOKEN_KEY)===AUTH_HASH)return true;}catch(e){}
+ return false;
+}
+function signOut(){
+ try{localStorage.removeItem(TOKEN_KEY);}catch(e){}
+ try{sessionStorage.removeItem(TOKEN_KEY);}catch(e){}
+ document.getElementById('lPass').value='';lock();
+}
+document.getElementById('loginForm').addEventListener('submit',function(ev){
+ ev.preventDefault();
+ var err=document.getElementById('lErr');
+ var h=credHash(document.getElementById('lEmail').value,document.getElementById('lPass').value);
+ if(h===AUTH_HASH){
+  err.textContent='';
+  var stay=document.getElementById('lStay').checked;
+  try{(stay?localStorage:sessionStorage).setItem(TOKEN_KEY,AUTH_HASH);}catch(e){}
+  document.getElementById('lPass').value='';
+  unlock();
+ }else{
+  err.textContent='Incorrect email or password.';
+  document.getElementById('lPass').value='';
+ }
 });
-document.addEventListener('submit',function(ev){
-  var id=ev.target&&ev.target.id;
-  if(id==='authform'){ev.preventDefault();submitAuth()}
-  else if(id==='pwform'){ev.preventDefault();accountCall('changepw',$('pw-cur').value,$('pw-new').value,'pwmsg')}
-  else if(id==='rsform'){ev.preventDefault();accountCall('resetpartner',$('rs-cur').value,$('rs-new').value,'rsmsg')}
-});
-document.addEventListener('input',function(ev){
-  var id=ev.target&&ev.target.id;
-  if(id==='f-text'||id==='f-win')onEdit();
-});
-$('lb').addEventListener('click',closePhoto);
-document.addEventListener('keydown',function(ev){if(ev.key==='Escape'&&!$('lb').hidden)closePhoto()});
-renderHero();
-document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')flushPendings()});
-window.addEventListener('pagehide',flushPendings);
+document.getElementById('outBtn').addEventListener('click',signOut);
+if(isSignedIn())unlock();
 
-/* midnight rollover: sealed states update and a page that was on "today" moves to the new day */
-var lastToday=TODAY();
-setInterval(function(){
-  var t=TODAY();
-  if(t===lastToday)return;
-  var old=lastToday;lastToday=t;
-  var n=parts(t);
-  if(S.view==='week'&&iso(S.y,S.m,S.d)===old){
-    flushPendings();
-    Object.assign(S,{y:n.y,m:n.m,w:Math.ceil(n.d/7),d:n.d});
-    S.shell=null;ensureYear();
-  }
-  updateView();
-},30000);
+/* ---- Install as an app ---- */
+var installEvt=null,installBtn=document.getElementById('installBtn');
+window.addEventListener('beforeinstallprompt',function(ev){ev.preventDefault();installEvt=ev;installBtn.hidden=false;});
+installBtn.addEventListener('click',function(){
+ if(!installEvt)return;
+ installEvt.prompt();
+ installEvt.userChoice.then(function(){installEvt=null;installBtn.hidden=true;},function(){});
+});
+window.addEventListener('appinstalled',function(){installEvt=null;installBtn.hidden=true;});
+if('serviceWorker' in navigator&&location.protocol.indexOf('http')===0){
+ window.addEventListener('load',function(){try{navigator.serviceWorker.register('sw.js').catch(function(){});}catch(e){}});
+}
 
-/* ---------- start ---------- */
-(async function init(){
-  var t=parts(TODAY());
-  Object.assign(S,{y:t.y,m:t.m,w:Math.ceil(t.d/7),d:t.d});
-  pendingLoad();
-  updateView();
-  await loadMe();
-  updateView();
-  if(S.me){ensureYear(true);syncPending()}
-  setInterval(function(){if(document.visibilityState==='visible'&&S.me&&!document.activeElement.matches('textarea,input'))pull()},20000);
-  window.addEventListener('online',function(){loadMe().then(function(){if(S.me){syncPending();pull()}})});
-  window.addEventListener('offline',function(){setOnline(false)});
-  document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible'&&S.me){syncPending();pull()}});
-  if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catch(function(){})}
-})();
+load();
+applyBg();
+render();
+if(window.matchMedia&&window.matchMedia('(min-width:761px)').matches)document.body.classList.add('edit');
 })();
 </script>
 </body>
