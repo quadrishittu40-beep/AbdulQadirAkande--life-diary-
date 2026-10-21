@@ -1,13 +1,9 @@
 /* Offline support for My Life Diary. Entries live in the browser's own storage, so only the app files are cached here. */
-var CACHE = 'life-diary-v2';
+var CACHE = 'life-diary-v4';
 var FILES = [
   './',
   'index.html',
   'manifest.webmanifest',
-  'icon-192.png',
-  'icon-512.png',
-  'icon-maskable-512.png',
-  'apple-touch-icon.png',
   'assets/photo.jpg',
   'assets/backgrounds/bg1.jpg',
   'assets/backgrounds/bg2.jpg',
