@@ -4,6 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>My Life Diary</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#1f6f5c">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Life Diary">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" href="icon-192.png">
 <style>
 :root{--bg:#f7f3ec;--card:#fffdf8;--ink:#2b2a27;--mute:#7a756b;--line:#e4ddcf;--accent:#1f6f5c;--accent-ink:#fff;--danger:#b3412f}
 @media (prefers-color-scheme:dark){:root{--bg:#171917;--card:#1f221f;--ink:#ece8de;--mute:#9a9588;--line:#31352f;--accent:#4fb89c;--accent-ink:#0d1512;--danger:#e07a68}}
@@ -456,6 +463,9 @@ document.getElementById('loginForm').addEventListener('submit',function(ev){
 document.getElementById('outBtn').addEventListener('click',signOut);
 if(isSignedIn())unlock();
 
+if('serviceWorker' in navigator&&location.protocol.indexOf('http')===0){
+ window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});
+}
 load();
 applyBg();
 render();
