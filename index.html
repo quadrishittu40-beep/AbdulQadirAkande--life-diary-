@@ -2,8 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>My Life Diary</title>
+<meta name="theme-color" content="#0f4c45">
+<meta name="description" content="Personal diary for daily activities and achievements, with a signed PDF for each day.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Life Diary">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <style>
 :root{--bg:#f7f3ec;--card:#fffdf8;--ink:#2b2a27;--mute:#7a756b;--line:#e4ddcf;--accent:#1f6f5c;--accent-ink:#fff;--danger:#b3412f}
 @media (prefers-color-scheme:dark){:root{--bg:#171917;--card:#1f221f;--ink:#ece8de;--mute:#9a9588;--line:#31352f;--accent:#4fb89c;--accent-ink:#0d1512;--danger:#e07a68}}
@@ -11,13 +20,13 @@
 html,body{margin:0;height:100%}
 body{background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Naskh Arabic",sans-serif}
 button,input,select,textarea{font:inherit;color:inherit}
-header.top{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--card);position:sticky;top:0;z-index:5}
+header.top{display:flex;align-items:center;gap:10px;padding:calc(10px + env(safe-area-inset-top,0px)) calc(14px + env(safe-area-inset-right,0px)) 10px calc(14px + env(safe-area-inset-left,0px));border-bottom:1px solid var(--line);background:var(--card);position:sticky;top:0;z-index:5}
 header.top h1{font-size:18px;margin:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .btn{border:1px solid var(--line);background:var(--card);padding:8px 12px;border-radius:10px;cursor:pointer;min-height:40px}
 .btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .btn.danger{color:var(--danger)}
 .btn:active{transform:translateY(1px)}
-.app{display:grid;grid-template-columns:320px 1fr;height:calc(100% - 61px)}
+.app{display:grid;grid-template-columns:320px 1fr;height:calc(100% - 61px - env(safe-area-inset-top,0px))}
 aside{border-right:1px solid var(--line);overflow:auto;padding:12px}
 main{overflow:auto;padding:16px}
 .search{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);margin-bottom:10px}
@@ -113,6 +122,7 @@ body.hasbg aside,body.hasbg main{background:color-mix(in srgb,var(--bg) 80%,tran
   <h1 id="title">My Life Diary</h1>
   <button class="btn primary" id="todayBtn">Today</button>
   <button class="btn" id="achBtn">Achievements</button>
+  <button class="btn" id="installBtn" hidden>Install</button>
   <button class="btn" id="setBtn">⚙</button>
   <button class="btn" id="outBtn" title="Sign out">Sign out</button>
 </header>
@@ -332,6 +342,8 @@ function renderSettings(){
   state.profile.bg?el('button',{class:'btn danger',text:'Remove',on:{click:function(){delete state.profile.bg;save();applyBg();renderSettings();}}}):null,
   bgIn
  ]));
+ p.appendChild(el('label',{text:'INSTALL AS AN APP'}));
+ p.appendChild(el('div',{class:'hint',text:'Android or computer: tap the Install button at the top, or use the browser menu and choose Install app. iPhone: tap Share, then Add to Home Screen. Open the diary from the home screen icon afterwards.'}));
  p.appendChild(el('label',{text:'BACKUP'}));
  p.appendChild(el('div',{class:'hint',text:'Your diary is stored only in this browser. Export a backup regularly, and import it to restore or move to another device.'}));
  var imp=el('input',{type:'file',accept:'application/json,.json',style:'display:none'});
@@ -479,6 +491,19 @@ document.getElementById('loginForm').addEventListener('submit',function(ev){
 });
 document.getElementById('outBtn').addEventListener('click',signOut);
 if(isSignedIn())unlock();
+
+/* ---- Install as an app ---- */
+var installEvt=null,installBtn=document.getElementById('installBtn');
+window.addEventListener('beforeinstallprompt',function(ev){ev.preventDefault();installEvt=ev;installBtn.hidden=false;});
+installBtn.addEventListener('click',function(){
+ if(!installEvt)return;
+ installEvt.prompt();
+ installEvt.userChoice.then(function(){installEvt=null;installBtn.hidden=true;},function(){});
+});
+window.addEventListener('appinstalled',function(){installEvt=null;installBtn.hidden=true;});
+if('serviceWorker' in navigator&&location.protocol.indexOf('http')===0){
+ window.addEventListener('load',function(){try{navigator.serviceWorker.register('sw.js').catch(function(){});}catch(e){}});
+}
 
 load();
 applyBg();
