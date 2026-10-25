@@ -458,8 +458,8 @@ function sha256(ascii){
  for(i=0;i<8;i++)for(j=3;j+1;j--){var b=(hash[i]>>(j*8))&255;res+=((b<16)?0:'')+b.toString(16);}
  return res;
 }
-var AUTH_SALT='74c6955d7ca9464f';
-var AUTH_HASH='7942fcbfca25fda665ce744444e2fdb96d70ca1943264cc703499ef0b35fb9f7';
+var AUTH_SALT='4785085ef21fef9a';
+var AUTH_HASH='f45aecd5688c55b498535a2e2df3376abc313adefa867d476faf9fef4fee24ea';
 var TOKEN_KEY='lifeDiary.auth';
 function credHash(email,pass){return sha256(AUTH_SALT+unescape(encodeURIComponent(email.trim().toLowerCase()+':'+pass)));}
 function unlock(){document.body.classList.remove('locked');}
